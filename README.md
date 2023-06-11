@@ -1,2 +1,2 @@
-# vault
-Vault, Storage or Warehouse.
+# Vault
+- Suikoden series' "Vault, Storage or Warehouse."
