@@ -194,9 +194,9 @@ DEPENDENCIES
   bootsnap
   debug
   jbuilder
-  pg (~> 1.1)
-  puma (~> 6.0)
-  rails (~> 7.0.5)
+  pg
+  puma
+  rails
   rubocop-rails
 
 RUBY VERSION
