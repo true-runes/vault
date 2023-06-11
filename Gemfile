@@ -6,6 +6,7 @@ ruby '3.2.2'
 gem 'activerecord-import'
 gem 'bootsnap', require: false
 gem 'dotenv-rails'
+gem 'google-apis-sheets_v4'
 gem 'jbuilder'
 gem 'pg'
 gem 'puma'
