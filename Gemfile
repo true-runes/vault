@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
+
 gem 'activerecord-import'
 gem 'bootsnap', require: false
 gem 'dotenv-rails'
@@ -17,4 +18,9 @@ end
 
 group :development do
   gem 'rails-erd'
+end
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', require: false
 end
