@@ -1,3 +1,5 @@
+.env
+
 # デフォルト項目
 /.bundle
 vendor/

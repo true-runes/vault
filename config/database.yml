@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: vault_development
+  database: suikoden_vault_development
 
 test:
   <<: *default
-  database: vault_test
+  database: suikoden_vault_test
 
 production:
   <<: *default
-  database: vault_production
+  database: suikoden_vault_production
   username: vault
-  password: <%= ENV["VAULT_DATABASE_PASSWORD"] %>
+  password: <%= ENV["SUIKODEN_VAULT_DATABASE_PASSWORD"] %>
