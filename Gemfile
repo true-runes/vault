@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.2'
 gem 'activerecord-import'
 gem 'bootsnap', require: false
+gem 'dotenv-rails'
 gem 'jbuilder'
 gem 'pg'
 gem 'puma'
