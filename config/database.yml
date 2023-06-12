@@ -6,27 +6,27 @@ default: &default
 development:
   <<: *default
   database: suikoden_vault_development
-  host: <%= ENV.fetch('PG_DEVELOPMENT_HOST') || 'localhost' %>
-  port: <%= ENV.fetch('PG_DEVELOPMENT_PORT') || 5432 %>
-  username: <%= ENV.fetch('PG_DEVELOPMENT_USER') || 'root' %>
-  password: <%= ENV.fetch('PG_DEVELOPMENT_PASS') || 'postgres' %>
+  host: <%= ENV['PG_DEVELOPMENT_HOST'] || 'localhost' %>
+  port: <%= ENV['PG_DEVELOPMENT_PORT'] || 5432 %>
+  username: <%= ENV['PG_DEVELOPMENT_USER'] || 'root' %>
+  password: <%= ENV['PG_DEVELOPMENT_PASS'] || 'postgres' %>
 
 test:
   <<: *default
   database: suikoden_vault_test
-  host: <%= ENV.fetch('PG_TEST_HOST') || 'localhost' %>
-  port: <%= ENV.fetch('PG_TEST_PORT') || 5432 %>
-  username: <%= ENV.fetch('PG_TEST_USER') || 'root' %>
-  password: <%= ENV.fetch('PG_TEST_PASS') || 'postgres' %>
+  host: <%= ENV['PG_TEST_HOST'] || 'localhost' %>
+  port: <%= ENV['PG_TEST_PORT'] || 5432 %>
+  username: <%= ENV['PG_TEST_USER'] || 'root' %>
+  password: <%= ENV['PG_TEST_PASS'] || 'postgres' %>
 
 production:
   <<: *default
   database: suikoden_vault_production
-  host: <%= ENV.fetch('PG_PRODUCTION_HOST') || 'localhost' %>
-  port: <%= ENV.fetch('PG_PRODUCTION_PORT') || 5432 %>
-  username: <%= ENV.fetch('PG_PRODUCTION_USER') %>
-  password: <%= ENV.fetch('PG_PRODUCTION_PASS') %>
+  host: <%= ENV['PG_PRODUCTION_HOST'] || 'localhost' %>
+  port: <%= ENV['PG_PRODUCTION_PORT'] || 5432 %>
+  username: <%= ENV['PG_PRODUCTION_USER'] %>
+  password: <%= ENV['PG_PRODUCTION_PASS'] %>
   sslmode: verify-ca
-  sslcert: <%= ENV.fetch('PG_SSLCERT_PATH') || 'config/postgresql/client.crt' %>
-  sslkey: <%= ENV.fetch('PG_SSLKEY_PATH') || 'config/postgresql/client.key' %>
-  sslrootcert: <%= ENV.fetch('PG_SSLROOT_PATH') || 'config/postgresql/root.crt' %>
+  sslcert: <%= ENV['PG_SSLCERT_PATH'] || 'config/postgresql/client.crt' %>
+  sslkey: <%= ENV['PG_SSLKEY_PATH'] || 'config/postgresql/client.key' %>
+  sslrootcert: <%= ENV['PG_SSLROOT_PATH'] || 'config/postgresql/root.crt' %>
