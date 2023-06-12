@@ -1,5 +1,9 @@
 .env
 
+config/postgresql/client.crt
+config/postgresql/client.key
+config/postgresql/root.crt
+
 # デフォルト項目
 /.bundle
 vendor/

@@ -1,18 +1,32 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
 
 development:
   <<: *default
   database: suikoden_vault_development
+  host: <%= ENV.fetch('PG_HOST_DEVELOPMENT') || 'localhost' %>
+  port: <%= ENV.fetch('PG_PORT_DEVELOPMENT') || 5432 %>
+  username: <%= ENV.fetch('PG_USER_DEVELOPMENT') || 'root' %>
+  password: <%= ENV.fetch('PG_PASS_DEVELOPMENT') || 'postgres' %>
 
 test:
   <<: *default
   database: suikoden_vault_test
+  host: <%= ENV.fetch('PG_HOST_TEST') || 'localhost' %>
+  port: <%= ENV.fetch('PG_PORT_TEST') || 5432 %>
+  username: <%= ENV.fetch('PG_USER_TEST') || 'root' %>
+  password: <%= ENV.fetch('PG_PASS_TEST') || 'postgres' %>
 
 production:
   <<: *default
   database: suikoden_vault_production
-  username: vault
-  password: <%= ENV["SUIKODEN_VAULT_DATABASE_PASSWORD"] %>
+  host: <%= ENV.fetch('PG_HOST_PRODUCTION') || 'localhost' %>
+  port: <%= ENV.fetch('PG_PORT_PRODUCTION') || 5432 %>
+  username: <%= ENV.fetch('PG_USER_PRODUCTION') %>
+  password: <%= ENV.fetch('PG_PASS_PRODUCTION') %>
+  sslmode: verify-ca
+  sslcert: <%= ENV.fetch('PG_SSLCERT_PATH') || 'config/postgresql/client.crt' %>
+  sslkey: <%= ENV.fetch('PG_SSLKEY_PATH') || 'config/postgresql/client.key' %>
+  sslrootcert: <%= ENV.fetch('PG_SSLROOT_PATH') || 'config/postgresql/root.crt' %>
