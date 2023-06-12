@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_121238) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stars", force: :cascade do |t|
+    t.string "name", null: false, comment: "宿星の名前（日本語）"
+    t.string "name_en", null: false, comment: "宿星の名前（英語）"
+    t.integer "seating_order", null: false, comment: "席次"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_stars_on_name", unique: true
+    t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
+  end
 
 end

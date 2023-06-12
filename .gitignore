@@ -4,6 +4,8 @@ config/postgresql/client.crt
 config/postgresql/client.key
 config/postgresql/root.crt
 
+config/spreadsheet/creds.json
+
 # デフォルト項目
 /.bundle
 vendor/
