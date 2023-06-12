@@ -8,6 +8,7 @@ class CreateStars < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
+    # "name_en" カラムには "Leader Star" が複数回登場する
     add_index :stars, :name, unique: true
     add_index :stars, :seating_order, unique: true
   end
