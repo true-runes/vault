@@ -8,7 +8,10 @@ module ImportService
     )
       @data_table = case data_source
                     when :spreadsheet
-                      data_table_from_spreadsheet(spreadsheet_title:, worksheet_name:)
+                      data_table_from_spreadsheet(
+                        spreadsheet_title:,
+                        worksheet_name:
+                      )
                     when :csv
                       data_table_from_csv(csv_filepath:)
                     end
