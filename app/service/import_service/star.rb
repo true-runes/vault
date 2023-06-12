@@ -1,14 +1,5 @@
 module ImportService
   class Star < Base
-    def initialize(
-      data_source: :spreadsheet,
-      csv_filepath: nil,
-      spreadsheet_title: nil,
-      worksheet_name: nil
-    )
-      super
-    end
-
     def execute
       ActiveRecord::Base.transaction do
         ::Star.import(columns, values, validate: true)
