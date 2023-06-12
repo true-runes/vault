@@ -1,16 +1,19 @@
 # $ op inject -i .env.tpl -o .env
 
-PG_HOST_DEVELOPMENT=op://Personal/7osscqrsds2jmobocq2twd5pjq/yl3pacrx662v4yd7vxmhypw52i
-PG_PORT_DEVELOPMENT=op://Personal/7osscqrsds2jmobocq2twd5pjq/port
-PG_USER_DEVELOPMENT=op://Personal/7osscqrsds2jmobocq2twd5pjq/username
-PG_PASS_DEVELOPMENT=op://Personal/7osscqrsds2jmobocq2twd5pjq/password
+PG_DEVELOPMENT_HOST=op://Personal/7osscqrsds2jmobocq2twd5pjq/yl3pacrx662v4yd7vxmhypw52i
+PG_DEVELOPMENT_PORT=op://Personal/7osscqrsds2jmobocq2twd5pjq/port
+PG_DEVELOPMENT_USER=op://Personal/7osscqrsds2jmobocq2twd5pjq/username
+PG_DEVELOPMENT_PASS=op://Personal/7osscqrsds2jmobocq2twd5pjq/password
 
-PG_HOST_TEST=op://Personal/7osscqrsds2jmobocq2twd5pjq/yl3pacrx662v4yd7vxmhypw52i
-PG_PORT_TEST=op://Personal/7osscqrsds2jmobocq2twd5pjq/port
-PG_USER_TEST=op://Personal/7osscqrsds2jmobocq2twd5pjq/username
-PG_PASS_TEST=op://Personal/7osscqrsds2jmobocq2twd5pjq/password
+PG_TEST_HOST=op://Personal/7osscqrsds2jmobocq2twd5pjq/yl3pacrx662v4yd7vxmhypw52i
+PG_TEST_PORT=op://Personal/7osscqrsds2jmobocq2twd5pjq/port
+PG_TEST_USER=op://Personal/7osscqrsds2jmobocq2twd5pjq/username
+PG_TEST_PASS=op://Personal/7osscqrsds2jmobocq2twd5pjq/password
 
-PG_HOST_PRODUCTION=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/hostname
-PG_PORT_PRODUCTION=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/port
-PG_USER_PRODUCTION=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/username
-PG_PASS_PRODUCTION=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/password
+PG_PRODUCTION_HOST=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/hostname
+PG_PRODUCTION_PORT=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/port
+PG_PRODUCTION_USER=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/username
+PG_PRODUCTION_PASS=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/password
+PG_SSLCERT_PATH=
+PG_SSLKEY_PATH=
+PG_SSLROOT_PATH=
