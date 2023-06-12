@@ -32,5 +32,7 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      - name: RuboCop を実行する
+        run: bundle exec rubocop
       - name: RSpec を実行する
         run: bundle exec rspec
