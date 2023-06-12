@@ -1,4 +1,5 @@
 # $ op inject -i .env.tpl -o .env
+RAILS_MASTER_KEY=op://Personal/b7nzrxcuyvy37cafgu3octmoyq/add more/suikoden_vault
 
 PG_DEVELOPMENT_HOST=op://Personal/7osscqrsds2jmobocq2twd5pjq/yl3pacrx662v4yd7vxmhypw52i
 PG_DEVELOPMENT_PORT=op://Personal/7osscqrsds2jmobocq2twd5pjq/port
