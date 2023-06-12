@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_121238) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_232155) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_121238) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_stars_on_name", unique: true
     t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string "name", null: false, comment: "作品タイトル名"
+    t.string "name_en", null: false, comment: "作品タイトル名（英語）"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_titles_on_name", unique: true
+    t.index ["name_en"], name: "index_titles_on_name_en", unique: true
   end
 
 end
