@@ -4,9 +4,12 @@ namespace :db do
     task execute: :environment do
       Rake::Task['db:migrate:reset'].invoke
 
-      puts "[#{Time.zone.now}] ImportService::Star.execute の実行を開始します。"
-      ImportService::Star.execute
-      puts "[#{Time.zone.now}] ImportService::Star.execute の実行が終了しました。"
+      puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
+      ImportService::Star.new(
+        spreadsheet_title: 'basic_attributes',
+        worksheet_name: 'stars'
+      ).execute
+      puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
 
       # 時間がかかるようになったらスキップするロジックを組み込む
       # Rake::Task['importer:foo:bar'].invoke
