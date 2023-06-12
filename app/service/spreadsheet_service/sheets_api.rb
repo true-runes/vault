@@ -2,7 +2,7 @@ require 'google/apis/sheets_v4'
 
 module SpreadsheetService
   class SheetsApi
-    CREDS_JSON_FILEPATH = ENV.fetch('SPREADSHEET_CREDENTIALS_FILEPATH')
+    CREDS_JSON_FILEPATH = ENV.fetch('SPREADSHEET_CREDENTIALS_FILEPATH', nil)
 
     class << self
       def create
