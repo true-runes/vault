@@ -4,12 +4,20 @@ namespace :db do
     task execute: :environment do
       Rake::Task['db:migrate:reset'].invoke
 
+      # sheet_id の map は app/service/spreadsheet_service/sheet_id.rb に記述している
       puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
       ImportService::Star.new(
         spreadsheet_title: 'basic_attributes',
         worksheet_name: 'stars'
       ).execute
       puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
+
+      puts "[#{Time.zone.now}] ImportService::Title の実行を開始します。"
+      ImportService::Title.new(
+        spreadsheet_title: 'products',
+        worksheet_name: 'titles'
+      ).execute
+      puts "[#{Time.zone.now}] ImportService::Title の実行が終了しました。"
 
       # 時間がかかるようになったらスキップするロジックを組み込む
       # Rake::Task['importer:foo:bar'].invoke
