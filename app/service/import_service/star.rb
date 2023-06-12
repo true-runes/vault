@@ -1,24 +1,28 @@
 module ImportService
   class Star < Base
-    def execute
-      ActiveRecord::Base.transaction do
-        ::Star.import(columns, values, validate: true)
+    class << self
+      def execute
+        ActiveRecord::Base.transaction do
+          ::Star.import(columns, values, validate: true)
+        end
       end
-    end
 
-    def columns
-      data_table.headers.map(&:to_sym)
-    end
+      def columns
+        data_table.headers.map(&:to_sym)
+      end
 
-    def values
-      data_table.rows
-    end
+      def values
+        data_table.rows
+      end
 
-    def data_table
-      spreadsheet_id = SpreadsheetService::SheetId.retrieve('basic_attributes')
-      worksheet_name = 'stars'
+      def data_table
+        spreadsheet_title = 'basic_attributes'
 
-      FetchDataTableService::FromSpreadsheet.new(spreadsheet_id, worksheet_name)
+        spreadsheet_id = SpreadsheetService::SheetId.retrieve(spreadsheet_title)
+        worksheet_name = 'stars'
+
+        FetchDataTableService::FromSpreadsheet.new(spreadsheet_id, worksheet_name)
+      end
     end
   end
 end

@@ -21,7 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_121238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_stars_on_name", unique: true
-    t.index ["name_en"], name: "index_stars_on_name_en", unique: true
     t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
   end
 

@@ -9,7 +9,6 @@ class CreateStars < ActiveRecord::Migration[7.0]
     end
 
     add_index :stars, :name, unique: true
-    add_index :stars, :name_en, unique: true
     add_index :stars, :seating_order, unique: true
   end
 end
