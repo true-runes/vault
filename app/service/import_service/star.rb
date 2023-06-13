@@ -2,7 +2,7 @@ module ImportService
   class Star < Base
     def execute
       ActiveRecord::Base.transaction do
-        ::Star.import(columns, values, validate: true)
+        klass.import(columns, values, validate: true)
       end
     end
 
@@ -12,6 +12,12 @@ module ImportService
 
     def values
       @data_table.rows
+    end
+
+    private
+
+    def klass
+      File.basename(__FILE__, File.extname(__FILE__)).classify.safe_constantize
     end
   end
 end
