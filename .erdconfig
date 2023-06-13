@@ -12,7 +12,7 @@ inheritance: false
 notation: bachman
 orientation: horizontal # or vertical
 polymorphism: false # true にすると "ActiveRecord" の STI までもが表示される
-title: 英会話マスタ整備
+title: 幻想水滸伝 Vault
 
 # true にすると現れる警告は以下のとおり
 # Warning: Ignoring invalid association :keywords on Headline (Rails couldn't find a valid model for Keyword association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.)
