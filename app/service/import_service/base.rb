@@ -36,9 +36,9 @@ module ImportService
     end
 
     def data_table_from_spreadsheet(spreadsheet_title:, worksheet_name:)
-      spreadsheet_id = SpreadsheetService::SheetId.retrieve(spreadsheet_title)
+      spreadsheet_id = SpreadsheetService::SheetId.title_to_id(spreadsheet_title)
 
-      FetchDataTableService::FromSpreadsheet.new(spreadsheet_id, worksheet_name)
+      FetchDataTableService::FromSpreadsheet.new(spreadsheet_id:, worksheet_name:)
     end
   end
 end

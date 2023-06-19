@@ -1,6 +1,6 @@
 module FetchDataTableService
   class FromSpreadsheet < Base
-    def initialize(spreadsheet_id, worksheet_name)
+    def initialize(spreadsheet_id:, worksheet_name:)
       super
 
       sheets_api = SpreadsheetService::SheetsApi.create

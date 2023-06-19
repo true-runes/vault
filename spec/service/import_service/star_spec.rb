@@ -1,13 +1,6 @@
 require 'rails_helper'
 
 describe ImportService::Star do
-  let(:service) do
-    ImportService::Star.new(
-      spreadsheet_title: 'basic_attributes',
-      worksheet_name: 'stars'
-    )
-  end
-
   it 'ソースをもとにしたサービスのオブジェクトが生成されること' do
     expect(
       ImportService::Star.new(
