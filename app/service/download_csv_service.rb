@@ -3,8 +3,11 @@ require 'csv'
 class DownloadCsvService
   # スプレッドシートからのダウンロードを大前提とする
   def initialize(spreadsheet_id:, worksheet_name:)
+    # YAML から "ENV['hoge']" という「文字列」で渡ってくることがある
+    this_spreadsheet_id = FileService.eval_plain_env_or_plain_text_variable(spreadsheet_id)
+
     @fetcher = FetchDataTableService::FromSpreadsheet.new(
-      spreadsheet_id:,
+      spreadsheet_id: this_spreadsheet_id,
       worksheet_name:
     )
   end
@@ -18,6 +21,7 @@ class DownloadCsvService
     end
 
     file_service = FileService.new(filepath)
+    FileUtils.mkdir_p(filepath.dirname) unless File.directory?(filepath.dirname)
     file_service.write(csv_contents)
   end
 end
