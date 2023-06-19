@@ -9,11 +9,13 @@ module FetchDataTableService
     end
 
     def headers
-      @csv.headers
+      # id の列が存在する場合には取り除く
+      @csv.headers.delete_if { |header| header == 'id' }
     end
 
     def rows
-      @csv.to_a.drop(1)
+      # id の列が存在する場合には値を取り除く
+      @csv.values_at(*headers).map { |row| row.delete_if { |_, v| v == 'id' } }
     end
 
     # @csv.values_at(*headers) だと複数列が取得できる（*headers の要素は文字列）
