@@ -7,15 +7,13 @@ namespace :db do
       # sheet_id の map は app/service/spreadsheet_service/sheet_id.rb に記述している
       puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
       ImportService::Star.new(
-        spreadsheet_title: 'basic_attributes',
-        worksheet_name: 'stars'
+        csv_filepath: Rails.root.join('db/csv/basic_attributes/stars.csv')
       ).execute
       puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
 
       puts "[#{Time.zone.now}] ImportService::Title の実行を開始します。"
       ImportService::Title.new(
-        spreadsheet_title: 'products',
-        worksheet_name: 'titles'
+        csv_filepath: Rails.root.join('db/csv/products/titles.csv')
       ).execute
       puts "[#{Time.zone.now}] ImportService::Title の実行が終了しました。"
 

@@ -3,7 +3,7 @@ module ImportService
     attr_reader :data_table
 
     def initialize(
-      data_source: :spreadsheet,
+      data_source: :csv,
       csv_filepath: nil,
       spreadsheet_title: nil,
       worksheet_name: nil
