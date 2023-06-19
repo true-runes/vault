@@ -1,5 +1,7 @@
 module ImportService
   class Base
+    attr_reader :data_table
+
     def initialize(
       data_source: :spreadsheet,
       csv_filepath: nil,

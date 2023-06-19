@@ -1,8 +1,20 @@
 module ImportService
   class Title < Base
+    def initialize(
+      data_source: :spreadsheet,
+      csv_filepath: nil,
+      spreadsheet_title: nil,
+      worksheet_name: nil
+    )
+      super
+
+      @columns = columns
+      @values = values
+    end
+
     def execute
       ActiveRecord::Base.transaction do
-        klass.import(columns, values, validate: true)
+        klass.import(@columns, @values, validate: true)
       end
     end
 
