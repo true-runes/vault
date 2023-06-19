@@ -14,7 +14,7 @@ module SpreadsheetService
       @headers = @all_cells.first
       @rows = @all_cells.drop(1)
 
-      raise 'Some cells are invalid.' unless valid_all_cells?
+      raise "Some cells are invalid in #{@worksheet.properties.title}" unless valid_all_cells?
     end
 
     def all_cells(worksheet, range: 'A1:Z')
@@ -28,7 +28,8 @@ module SpreadsheetService
     def valid_all_cells?
       return false if @headers.blank? || @rows.blank?
 
-      @rows.each { |row| return false if row.size != @headers.size }
+      # この条件は「スプレッドシート」という特性から厳しすぎるので、いったんコメントアウト
+      # @rows.each { |row| return false if row.size != @headers.size }
 
       true
     end
