@@ -4,20 +4,22 @@ namespace :db do
     task execute: :environment do
       Rake::Task['db:migrate:reset'].invoke
 
-      # sheet_id の map は app/service/spreadsheet_service/sheet_id.rb に記述している
-      puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
-      ImportService::Star.new(
-        csv_filepath: Rails.root.join('db/csv/basic_attributes/stars.csv')
-      ).execute
-      puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
+      ActiveRecord::Base.transaction do
+        # sheet_id の map は app/service/spreadsheet_service/sheet_id.rb に記述している
+        puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
+        ImportService::Star.new(
+          csv_filepath: Rails.root.join('db/csv/basic_attributes/stars.csv')
+        ).execute
+        puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
 
-      puts "[#{Time.zone.now}] ImportService::Title の実行を開始します。"
-      ImportService::Title.new(
-        csv_filepath: Rails.root.join('db/csv/products/titles.csv')
-      ).execute
-      puts "[#{Time.zone.now}] ImportService::Title の実行が終了しました。"
+        puts "[#{Time.zone.now}] ImportService::Title の実行を開始します。"
+        ImportService::Title.new(
+          csv_filepath: Rails.root.join('db/csv/products/titles.csv')
+        ).execute
+        puts "[#{Time.zone.now}] ImportService::Title の実行が終了しました。"
 
-      # 時間がかかるようになったら条件によってインポートをスキップするロジックを組み込む
+        # 時間がかかるようになったら条件によってインポートをスキップするロジックを組み込む
+      end
 
       # ERD を出力する
       `bundle exec erd --filetype=dot`
