@@ -6,9 +6,9 @@ basic_attributes:
   id: ENV.fetch('SPREADSHEET_ID_BASIC_ATTRIBUTES')
   worksheet_names:
     - stars
-    # - companies
-    # - game_platforms
-    # - tax_rates
+    - companies
+    - game_platforms
+    - tax_rates
 
 products:
   id: ENV.fetch('SPREADSHEET_ID_PRODUCTS')
@@ -18,6 +18,4 @@ products:
 characters:
   id: ENV.fetch('SPREADSHEET_ID_CHARACTERS')
   worksheet_names:
-    - DB_characters
-    - DB_nicknames
-    - DB_products
+    - bases
