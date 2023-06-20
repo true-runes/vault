@@ -1,10 +1,5 @@
 # $ eval $(echo $ONE_PASSWORD_MY_PASSWORD | op signin --account my) && op inject -i .env.tpl -o .env
 
-# スプレッドシートID
-SPREADSHEET_ID_BASIC_ATTRIBUTES=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/basic_attributes
-SPREADSHEET_ID_PRODUCTS=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/products
-SPREADSHEET_ID_CHARACTERS=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/character_database
-
 # ファイル設定
 RAILS_MASTER_KEY='op://Personal/b7nzrxcuyvy37cafgu3octmoyq/add more/suikoden_vault'
 SPREADSHEET_CREDENTIALS_FILEPATH=config/spreadsheet/creds.json
@@ -28,3 +23,8 @@ PG_PRODUCTION_PASS=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/password
 PG_SSLCERT_PATH=
 PG_SSLKEY_PATH=
 PG_SSLROOT_PATH=
+
+# スプレッドシートID
+SPREADSHEET_ID_BASIC_ATTRIBUTES=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/basic_attributes
+SPREADSHEET_ID_PRODUCTS=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/products
+SPREADSHEET_ID_CHARACTERS=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/characters
