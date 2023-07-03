@@ -23,6 +23,19 @@ jobs:
       matrix:
         ruby-version:
           - .ruby-version
+    services:
+      postgres:
+        image: postgres:15.3
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - name: $ git clone する
@@ -32,6 +45,10 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      - name: データベースをセットアップする
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:migrate
       - name: RuboCop を実行する
         run: bundle exec rubocop
       - name: RSpec を実行する
