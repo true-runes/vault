@@ -1,13 +1,13 @@
 # ENV は eval することで値を取得する
 # id = yaml["basic_attributes"]["id"]; eval(id);
-# したがって、文字列を直書きするときはクォートしないとエラーになるので注意する
+# したがって、変数であってもクォートしないとエラーになるので注意する（イケてないので直したい）
 
 basic_attributes:
   id: ENV.fetch('SPREADSHEET_ID_BASIC_ATTRIBUTES')
   worksheet_names:
     - stars
     - companies
-    - game_platforms
+    - platforms
     - tax_rates
 
 products:

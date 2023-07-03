@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_03_094017) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_125307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "on_sheet_platforms", force: :cascade do |t|
+    t.string "name", null: false, comment: "ゲーム機の機種名"
+    t.string "name_en", null: false, comment: "ゲーム機の機種名（英語）"
+    t.string "nickname", null: false, comment: "ゲーム機の略称"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "on_sheet_stars", force: :cascade do |t|
     t.string "seating_order", null: false, comment: "108星の順番"

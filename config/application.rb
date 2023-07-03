@@ -20,7 +20,7 @@ module Vault
     config.generators do |generator|
       generator.test_framework(
         :rspec,
-        fixtures: true,
+        fixtures: false, # データの性質上、インポートした実データを用いるので原則不要
         controller_specs: true,
         helper_specs: false,
         routing_specs: false
