@@ -7,5 +7,8 @@ class CreateOnSheetPlatforms < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :on_sheet_platforms, :name, unique: true
+    add_index :on_sheet_platforms, :name_en, unique: true
   end
 end

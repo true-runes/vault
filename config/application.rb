@@ -26,7 +26,8 @@ module Vault
         routing_specs: false
       )
 
-      generator.fixture_replacement :factory_bot, dir: 'spec/factories'
+      # データの性質上、インポートした実データを用いるので原則不要
+      # generator.fixture_replacement :factory_bot, dir: 'spec/factories'
     end
   end
 end
