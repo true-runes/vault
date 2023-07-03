@@ -21,7 +21,7 @@ class DownloadCsvService
     end
 
     file_service = FileService.new(filepath)
-    FileUtils.mkdir_p(filepath.dirname) unless File.directory?(filepath.dirname)
+    FileUtils.mkdir_p(File.dirname(filepath)) unless File.directory?(File.dirname(filepath))
     file_service.write(csv_contents)
   end
 end

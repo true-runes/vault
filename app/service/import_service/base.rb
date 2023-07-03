@@ -27,8 +27,20 @@ module ImportService
       raise NotImplementedError
     end
 
+    def headers_without_id
+      # id の列が存在する場合には取り除く
+      columns.delete_if { |column| column == :id }
+    end
+
     def values
       raise NotImplementedError
+    end
+
+    # values は [1, 2, 3, 4, 5] の形
+    def values_without_id
+      # id の列が存在する場合には取り除く
+      # NOTE: id は 1つ目の要素 であることは仕様とする
+      values.map { |value| value[1..] }
     end
 
     def data_table_from_csv(csv_filepath:)

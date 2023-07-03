@@ -9,8 +9,7 @@ module FetchDataTableService
     end
 
     def headers
-      # id の列が存在する場合には取り除く
-      @csv.headers.delete_if { |header| header == 'id' }
+      @csv.headers
     end
 
     def rows
