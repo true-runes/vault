@@ -7,7 +7,7 @@ basic_attributes:
   worksheet_names:
     - stars
     - companies
-    - game_platforms
+    - platforms
     - tax_rates
 
 products:
