@@ -5,20 +5,17 @@ namespace :db do
       Rake::Task['db:migrate:reset'].invoke
 
       ActiveRecord::Base.transaction do
-        # sheet_id の map は app/service/spreadsheet_service/sheet_id.rb に記述している
-        puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
-        ImportService::Star.new(
-          csv_filepath: Rails.root.join('db/csv/basic_attributes/stars.csv')
+        puts "[#{Time.zone.now}] ImportService::OnSheet::Star の実行を開始します。"
+        ImportService::OnSheet::Star.new(
+          csv_filepath: Rails.root.join('db/csv_on_sheet/basic_attributes/stars.csv')
         ).execute
-        puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
+        puts "[#{Time.zone.now}] ImportService::OnSheet::Star の実行が終了しました。"
 
-        puts "[#{Time.zone.now}] ImportService::Title の実行を開始します。"
-        ImportService::Title.new(
-          csv_filepath: Rails.root.join('db/csv/products/titles.csv')
+        puts "[#{Time.zone.now}] ImportService::OnSheet::Title の実行を開始します。"
+        ImportService::OnSheet::Title.new(
+          csv_filepath: Rails.root.join('db/csv_on_sheet/products/titles.csv')
         ).execute
-        puts "[#{Time.zone.now}] ImportService::Title の実行が終了しました。"
-
-        # 時間がかかるようになったら条件によってインポートをスキップするロジックを組み込む
+        puts "[#{Time.zone.now}] ImportService::OnSheet::Title の実行が終了しました。"
       end
 
       # ERD を出力する
