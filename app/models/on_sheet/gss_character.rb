@@ -1,2 +1,4 @@
-class OnSheet::GssCharacter < ApplicationRecord
+module OnSheet
+  class GssCharacter < ApplicationRecord
+  end
 end
