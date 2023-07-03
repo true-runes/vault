@@ -1,2 +1,4 @@
-class OnSheet::Platform < ApplicationRecord
+module OnSheet
+  class Platform < ApplicationRecord
+  end
 end
