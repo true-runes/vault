@@ -14,15 +14,46 @@ edge[ fontname  =  "Arial" , fontsize  =  "7" , dir  =  "both" , arrowsize  =  "
 rankdir = "TB";
 label = "幻想水滸伝 Vault\n\n";
 splines = "spline";
+"m_OnSheet::GssSectionCity" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OnSheet::GssSectionCity</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="city_name">city_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="country_name">country_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="is_architecture">is_architecture <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="is_available">is_available <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="is_dungeon">is_dungeon <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="is_others">is_others <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="is_town_or_village_or_city">is_town_or_village_or_city <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="memo">memo <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="product_name">product_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+>];
+"m_OnSheet::GssSectionHqCharacter" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OnSheet::GssSectionHqCharacter</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="character_name">character_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="facility_or_position_name">facility_or_position_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="is_available">is_available <font face="Arial Italic" color="grey60">boolean</font></td></tr>
+  <tr><td align="left" width="130" port="note">note <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="product_name">product_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="role_of_hq_on_system">role_of_hq_on_system <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+>];
 "m_OnSheet::Platform" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
   <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OnSheet::Platform</font></td></tr>
 </table>
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
-  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="nickname">nickname <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname">nickname <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 "m_OnSheet::Star" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -31,9 +62,9 @@ splines = "spline";
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
-  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 "m_OnSheet::Title" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -42,8 +73,8 @@ splines = "spline";
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
-  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 }

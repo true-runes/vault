@@ -13,6 +13,12 @@ namespace :db do
         ),
         'ImportService::OnSheet::Platform' => Rails.root.join(
           Rails.root.join('db/csv_on_sheet/basic_attributes/platforms.csv')
+        ),
+        'ImportService::OnSheet::GssSectionHqCharacter' => Rails.root.join(
+          Rails.root.join('db/csv_on_sheet/gss_hq_characters_section/web_format_data.csv')
+        ),
+        'ImportService::OnSheet::GssSectionCity' => Rails.root.join(
+          Rails.root.join('db/csv_on_sheet/gss_cities_section/web_format_data.csv')
         )
       }
 

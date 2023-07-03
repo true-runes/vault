@@ -30,7 +30,7 @@ module ImportService
           imported_headers = headers_without_id_column
           imported_rows = rows_without_id_column
 
-          imported_klass.import(
+          imported_klass.import!(
             imported_headers,
             imported_rows,
             validate: true
