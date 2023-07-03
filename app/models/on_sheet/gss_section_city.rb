@@ -1,2 +1,4 @@
-class OnSheet::GssSectionCity < ApplicationRecord
+module OnSheet
+  class GssSectionCity < ApplicationRecord
+  end
 end

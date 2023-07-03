@@ -1,2 +1,4 @@
-class OnSheet::GssSectionHqCharacter < ApplicationRecord
+module OnSheet
+  class GssSectionHqCharacter < ApplicationRecord
+  end
 end
