@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Star, type: :model do
   describe 'Star クラス' do
-    it 'クラス名が class であること' do
-      expect(Star).to be_a Class
+    it 'レコードの数が 108 であること' do
+      expect(Star.count).to eq 108
     end
   end
 end
