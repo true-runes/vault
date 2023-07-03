@@ -20,12 +20,12 @@ characters:
   worksheet_names:
     - bases
 
-hq_characters_section:
+gss_hq_characters_section:
   id: ENV.fetch('SPREADSHEET_ID_HQ_CHARACTERS_SECTION')
   worksheet_names:
     - web_format_data
 
-cities_section:
+gss_cities_section:
   id: ENV.fetch('SPREADSHEET_ID_CITIES_SECTION')
   worksheet_names:
     - web_format_data

@@ -1,5 +1,4 @@
-id,is_available,product_name,character_name,"facility_or_position_name
-",role_of_hq_on_system,note
+id,is_available,product_name,character_name,facility_or_position_name,role_of_hq_on_system,note
 1,TRUE,幻水1,リュウカン,医者,"","極の「施設」カテゴリにはないが欲しいかも　医務室？
 医者は特例で採用  (2023/05/20)"
 2,TRUE,幻水1,オニール,うわさ話,プレイヤーに次の行動のヒントを教える,"本拠地での「システム的な役割」があるか？

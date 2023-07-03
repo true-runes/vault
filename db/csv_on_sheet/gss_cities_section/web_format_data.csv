@@ -1,0 +1,352 @@
+id,product_name,country_name,city_name,is_available,is_town_or_village_or_city,is_dungeon,is_architecture,is_others,memo
+1,幻水I,赤月帝国,アールス地方,FALSE,FALSE,FALSE,FALSE,TRUE
+2,幻水I,赤月帝国,アールスの地,FALSE,FALSE,FALSE,FALSE,TRUE
+3,幻水I,赤月帝国,赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE
+4,幻水I,赤月帝国,アンテイ,TRUE,TRUE,FALSE,FALSE,FALSE,（ビィル・ブランシェ）
+5,幻水I,赤月帝国,エルフの村,TRUE,TRUE,FALSE,FALSE,FALSE
+6,幻水I,赤月帝国,カク,TRUE,TRUE,FALSE,FALSE,FALSE
+7,幻水I,？,隠された紋章の村,TRUE,TRUE,FALSE,FALSE,FALSE,国は不明
+8,幻水I,赤月帝国,過去の洞窟,FALSE,FALSE,TRUE,FALSE,FALSE
+9,幻水I,赤月帝国,カレッカ,TRUE,TRUE,FALSE,FALSE,FALSE
+10,幻水I,赤月帝国,キーロフ,TRUE,TRUE,FALSE,FALSE,FALSE
+11,幻水I,赤月帝国,空中庭園,FALSE,FALSE,FALSE,FALSE,TRUE
+12,幻水I,赤月帝国,グレッグミンスター,TRUE,TRUE,FALSE,FALSE,FALSE
+13,幻水I,赤月帝国,クロン寺,TRUE,TRUE,FALSE,FALSE,TRUE,町？→ゲームで行ける場所で人も住んでるのであり？
+14,幻水I,赤月帝国,コウアン,TRUE,TRUE,FALSE,FALSE,FALSE
+15,幻水I,赤月帝国,ゴウラン地方,FALSE,FALSE,FALSE,FALSE,TRUE
+16,幻水I,赤月帝国,コボルトの村,TRUE,TRUE,FALSE,FALSE,FALSE,コボルト村　ゲーム中の表記はだいしんりん
+17,幻水I,赤月帝国,虎狼山,FALSE,FALSE,TRUE,FALSE,FALSE
+18,幻水I,赤月帝国,サラディ,TRUE,TRUE,FALSE,FALSE,FALSE
+19,幻水I,赤月帝国,シークの谷,FALSE,FALSE,TRUE,FALSE,FALSE
+20,幻水I,赤月帝国,セイカ,TRUE,TRUE,FALSE,FALSE,FALSE
+21,幻水I,赤月帝国,清風山,FALSE,FALSE,TRUE,FALSE,FALSE
+22,幻水I,赤月帝国,セナン地方,FALSE,FALSE,FALSE,FALSE,TRUE
+23,幻水I,赤月帝国,戦士の村,TRUE,TRUE,FALSE,FALSE,FALSE
+24,幻水I,赤月帝国,大森林,FALSE,FALSE,FALSE,FALSE,TRUE
+25,幻水I,赤月帝国,大森林の村,TRUE,TRUE,FALSE,FALSE,FALSE,ゲーム中の表記はだいしんりん　だが大森林の村でok
+26,幻水I,赤月帝国,ダナ地方,FALSE,FALSE,FALSE,FALSE,TRUE
+27,幻水I,赤月帝国,テイエン,TRUE,TRUE,FALSE,FALSE,FALSE,（ラック・ビィルジニテ）
+28,幻水I,"",デュナン湖,FALSE,FALSE,FALSE,FALSE,TRUE
+29,幻水I,"",デュナンの急流,FALSE,FALSE,FALSE,FALSE,TRUE
+30,幻水I,"",トラン共和国,FALSE,FALSE,FALSE,FALSE,TRUE
+31,幻水I,"",トラン湖,FALSE,FALSE,FALSE,FALSE,TRUE
+32,幻水I,赤月帝国,ドワーフの村,TRUE,TRUE,FALSE,FALSE,FALSE
+33,幻水I,赤月帝国,バナー鉱山,FALSE,FALSE,FALSE,FALSE,TRUE,記憶にないがダンジョンではなさそう
+34,幻水I,"",ハルモニア神聖国,FALSE,FALSE,FALSE,FALSE,TRUE
+35,幻水I,赤月帝国,魔術師の島,TRUE,TRUE,FALSE,FALSE,FALSE
+36,幻水I,赤月帝国,迷いの森,FALSE,FALSE,TRUE,FALSE,FALSE,ダンジョン
+37,幻水I,赤月帝国,リコン,TRUE,TRUE,FALSE,FALSE,FALSE,（プルミエ・ラムール）
+38,幻水I,"",ルパンダ,FALSE,FALSE,FALSE,FALSE,TRUE,グレッグミンスターの改名前
+39,幻水I,赤月帝国,レナンカンプ,TRUE,TRUE,FALSE,FALSE,FALSE
+40,幻水I,赤月帝国,ロッカクの里,TRUE,TRUE,FALSE,FALSE,TRUE,ゲーム中では行けない。カスミの台詞では「ロッカクの村」と出てくる　が、投票先に入れていい気はする→ok
+41,幻水I,赤月帝国,ロックランド,TRUE,TRUE,FALSE,FALSE,FALSE
+42,幻水I,"",赤月亭,FALSE,FALSE,FALSE,TRUE,TRUE,グレッグミンスターの宿屋
+43,幻水I,"",ガランの城塞,FALSE,FALSE,FALSE,TRUE,TRUE
+44,幻水I,"",北の関所,FALSE,FALSE,FALSE,TRUE,TRUE
+45,幻水I,"",グレッグミンスター城,FALSE,FALSE,FALSE,TRUE,TRUE
+46,幻水I,"",クワバの城塞,FALSE,FALSE,FALSE,TRUE,TRUE
+47,幻水I,"",けやき亭,FALSE,FALSE,FALSE,TRUE,TRUE,レナンカンプの宿屋
+48,幻水I,"",湖賊の砦,TRUE,TRUE,FALSE,TRUE,TRUE,マップ上には存在する　居るのは湖賊のみなので街にしなくてもいい？
+49,幻水I,"",水上砦シャサラザード,FALSE,FALSE,FALSE,TRUE,FALSE,ダンジョン寄り？
+50,幻水I,"",スカーレティシア城,TRUE,FALSE,TRUE,TRUE,FALSE,ダンジョンだけど入れる
+51,幻水I,"",ソニエール監獄,FALSE,FALSE,TRUE,TRUE,FALSE
+52,幻水I,"",トラン湖の城,FALSE,FALSE,FALSE,TRUE,FALSE,本拠地
+53,幻水I,"",ドワーフの大金庫,FALSE,FALSE,TRUE,TRUE,FALSE
+54,幻水I,"",ネクロードの城,TRUE,FALSE,TRUE,TRUE,FALSE,ダンジョンだけど入れる
+55,幻水I,"",パンヌ・ヤクタ城,TRUE,FALSE,TRUE,TRUE,FALSE,戦争イベント　ダンジョン
+56,幻水I,"",秘密工場,TRUE,TRUE,FALSE,TRUE,TRUE,マップ上にはある
+57,幻水I,"",モラビア城,TRUE,FALSE,TRUE,TRUE,FALSE,戦争イベントのみ？
+58,幻水I,"",リュウカンの庵,TRUE,TRUE,FALSE,TRUE,FALSE
+59,幻水I,"",竜騎士の砦,TRUE,TRUE,FALSE,TRUE,FALSE,竜洞騎士団の本拠地
+60,幻水I,"",竜洞,FALSE,FALSE,TRUE,TRUE,FALSE,クナン地方～竜洞騎士団をつなぐ洞窟
+61,幻水I,"",レパント邸,FALSE,FALSE,FALSE,TRUE,FALSE,コウアンの屋敷
+62,幻水I,"",ロリマーの城塞,FALSE,FALSE,FALSE,TRUE,FALSE,関所
+63,幻水I,"",本拠地,TRUE,TRUE,FALSE,FALSE,FALSE,トラン湖の城
+64,幻水II,"",蒼き月の村,TRUE,TRUE,FALSE,FALSE,FALSE,ゲーム内では出ていない。滅んでいる。
+65,幻水II,"",赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+66,幻水II,ジョウストン都市同盟,燕北の峠,FALSE,FALSE,TRUE,FALSE,FALSE
+67,幻水II,ジョウストン都市同盟,街道の村,TRUE,TRUE,FALSE,FALSE,FALSE
+68,幻水II,"",風の洞窟,FALSE,FALSE,TRUE,FALSE,FALSE
+69,幻水II,カナカン,カナカン,FALSE,FALSE,FALSE,FALSE,TRUE,ゲーム内では国名だけ出ている
+70,幻水II,ハイランド王国,キャロの街,TRUE,TRUE,FALSE,FALSE,FALSE
+71,幻水II,ジョウストン都市同盟,クスクスの街,TRUE,TRUE,FALSE,FALSE,FALSE
+72,幻水II,"",グラスランド,FALSE,FALSE,FALSE,FALSE,TRUE,IIでは地名だけ出ている
+73,幻水II,ジョウストン都市同盟,グリンヒル市,TRUE,TRUE,FALSE,FALSE,FALSE
+74,幻水II,"",グリンヒルの森,FALSE,FALSE,TRUE,FALSE,FALSE
+75,幻水II,トラン共和国,グレッグミンスター,TRUE,TRUE,FALSE,FALSE,FALSE
+76,幻水II,ジョウストン都市同盟,クロムの村,TRUE,TRUE,FALSE,FALSE,FALSE
+77,幻水II,"",群島諸国,FALSE,FALSE,FALSE,FALSE,TRUE,IIでは地名だけ出ている
+78,幻水II,ハイランド王国,皇都ルルノイエ,TRUE,TRUE,TRUE,FALSE,FALSE
+79,幻水II,ジョウストン都市同盟,虎口の村,TRUE,TRUE,FALSE,FALSE,FALSE,ここうのむら
+80,幻水II,ジョウストン都市同盟,コボルト村,TRUE,TRUE,FALSE,FALSE,FALSE
+81,幻水II,"",コボルト村の森,FALSE,FALSE,TRUE,FALSE,FALSE
+82,幻水II,ジョウストン都市同盟,コロネの村,TRUE,TRUE,FALSE,FALSE,FALSE
+83,幻水II,ジョウストン都市同盟,サウスウィンドゥ市,TRUE,TRUE,FALSE,FALSE,FALSE
+84,幻水II,ハイランド王国,サジャの村,TRUE,TRUE,FALSE,FALSE,FALSE
+85,幻水II,"",ジョウストンの丘,FALSE,FALSE,FALSE,FALSE,TRUE,街の一部？
+86,幻水II,"",シンダル遺跡,FALSE,FALSE,TRUE,FALSE,FALSE
+87,幻水II,"",ゼクセン連邦,FALSE,FALSE,FALSE,FALSE,TRUE,IIでは地名だけ出ている
+88,幻水II,"",翼と鱗の世界,FALSE,FALSE,FALSE,FALSE,TRUE,ドラゴンたちの本来住む世界
+89,幻水II,"",ティント坑道,FALSE,FALSE,TRUE,FALSE,FALSE
+90,幻水II,ジョウストン都市同盟,ティント市,TRUE,TRUE,FALSE,FALSE,FALSE
+91,幻水II,"",デュナン共和国,FALSE,FALSE,FALSE,FALSE,TRUE,END後の国名
+92,幻水II,"",デュナン君主国,FALSE,FALSE,FALSE,FALSE,TRUE,END後の国名
+93,幻水II,"",デュナン湖,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+94,幻水II,"",天山の峠,FALSE,FALSE,TRUE,FALSE,FALSE
+95,幻水II,ジョウストン都市同盟,トゥーリバー市,TRUE,TRUE,FALSE,FALSE,FALSE
+96,幻水II,"",トゥーリバーの地下水路,FALSE,FALSE,TRUE,FALSE,FALSE
+97,幻水II,ジョウストン都市同盟,トトの村,TRUE,TRUE,FALSE,FALSE,FALSE
+98,幻水II,"",トラン共和国,FALSE,FALSE,FALSE,FALSE,TRUE,Iの国名
+99,幻水II,"",トランへの山道,FALSE,FALSE,TRUE,FALSE,FALSE
+100,幻水II,ジョウストン都市同盟,ノースウィンドウ,TRUE,TRUE,FALSE,FALSE,FALSE
+101,幻水II,"",ハイランド王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+102,幻水II,"",ハイランド駐屯地,FALSE,FALSE,TRUE,FALSE,FALSE,どちらかといえばダンジョン
+103,幻水II,ジョウストン都市同盟,バナーの村,TRUE,TRUE,FALSE,FALSE,FALSE
+104,幻水II,"",ハルモニア神聖国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+105,幻水II,"",ファレナ女王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+106,幻水II,"",封印のほこら,FALSE,FALSE,TRUE,FALSE,FALSE
+107,幻水II,"",深き森,FALSE,FALSE,TRUE,FALSE,FALSE
+108,幻水II,ジョウストン都市同盟,ミューズ市,TRUE,TRUE,FALSE,FALSE,FALSE
+109,幻水II,"",無名諸国,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+110,幻水II,"",森の抜け道,FALSE,FALSE,TRUE,FALSE,FALSE
+111,幻水II,ジョウストン都市同盟,森の村,TRUE,TRUE,FALSE,FALSE,FALSE
+112,幻水II,"",約束の地,FALSE,FALSE,TRUE,FALSE,FALSE
+113,幻水II,"",洛帝山,FALSE,FALSE,TRUE,FALSE,FALSE
+114,幻水II,ジョウストン都市同盟,ラダトの街,TRUE,TRUE,FALSE,FALSE,FALSE
+115,幻水II,ジョウストン都市同盟,竜口の村,TRUE,TRUE,FALSE,FALSE,FALSE
+116,幻水II,ジョウストン都市同盟,リューベの村,TRUE,TRUE,FALSE,FALSE,FALSE
+117,幻水II,"",リューベの村の山道,FALSE,FALSE,TRUE,FALSE,FALSE
+118,幻水II,ジョウストン都市同盟,レイクウェストの街,TRUE,TRUE,FALSE,FALSE,FALSE
+119,幻水II,トラン共和国,ロッカクの里,TRUE,TRUE,FALSE,FALSE,FALSE
+120,幻水II,ジョウストン都市同盟,ロックアックス,TRUE,TRUE,TRUE,FALSE,FALSE,一部ダンジョン扱い？
+121,幻水II,"",グレッグミンスター城,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+122,幻水II,"",サウスウィンドゥ市庁舎,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+123,幻水II,"",ティント教会,FALSE,FALSE,FALSE,TRUE,FALSE,建築　ネクロード戦の場所
+124,幻水II,"",ノースウィンドゥの城,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+125,幻水II,ジョウストン都市同盟,白鹿亭,TRUE,TRUE,FALSE,TRUE,TRUE,建築　マップ上にあり
+126,幻水II,"",ミューズ市庁舎,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+127,幻水II,"",傭兵隊の砦,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+128,幻水II,"",ルルノイエ城,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+129,幻水II,"",本拠地,TRUE,TRUE,FALSE,TRUE,FALSE,建築
+130,外伝,"",蒼き月の村,TRUE,TRUE,FALSE,FALSE,FALSE,ゲーム内では出ていない。滅んでいる。
+131,外伝,"",カレリア,FALSE,FALSE,FALSE,FALSE,TRUE,ゲーム内では国名だけ出ている
+132,外伝,"",グラスランド,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+133,外伝,ハルモニア神聖国,クリスタルバレー,TRUE,TRUE,FALSE,FALSE,FALSE,ゲーム内では街名だけ出ている
+134,外伝,ジョウストン都市同盟,グリンヒル市,FALSE,TRUE,FALSE,FALSE,FALSE
+135,外伝,"",サナディア,TRUE,TRUE,FALSE,FALSE,TRUE,ゲーム内では出ていない。滅んでいる国。
+136,外伝,"",ジョウストン都市同盟,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+137,外伝,"",ハイランド王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+138,外伝,"",ハイランド駐屯地,FALSE,FALSE,FALSE,FALSE,TRUE
+139,外伝,"",ハルモニア神聖国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+140,外伝,ハルモニア神聖国,マリードの村,TRUE,TRUE,FALSE,FALSE,FALSE
+141,外伝,ジョウストン都市同盟,ミューズ市,FALSE,TRUE,FALSE,FALSE,FALSE
+142,外伝,グラスランド,ミリトの村,TRUE,TRUE,FALSE,FALSE,FALSE
+143,幻水III,"",赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+144,幻水III,"",アムル平原,FALSE,FALSE,TRUE,FALSE,FALSE
+145,幻水III,"",アムル平原・北,FALSE,FALSE,TRUE,FALSE,FALSE
+146,幻水III,グラスランド,アルマ・キナンの村,TRUE,TRUE,FALSE,FALSE,FALSE
+147,幻水III,ゼクセン連邦,イクセの村,TRUE,TRUE,FALSE,FALSE,FALSE
+148,幻水III,グラスランド,カラヤの村,TRUE,TRUE,FALSE,FALSE,FALSE
+149,幻水III,ハルモニア神聖国,カレリア,TRUE,TRUE,FALSE,FALSE,FALSE
+150,幻水III,"",儀式の地,FALSE,FALSE,TRUE,FALSE,FALSE
+151,幻水III,"",北の洞窟,FALSE,FALSE,TRUE,FALSE,FALSE
+152,幻水III,"",クプトの森,FALSE,FALSE,TRUE,FALSE,FALSE
+153,幻水III,"",グラスランド,FALSE,FALSE,FALSE,FALSE,TRUE,地方の名前
+154,幻水III,ハルモニア神聖国,クリスタルバレー,TRUE,TRUE,FALSE,FALSE,FALSE
+155,幻水III,"",高速路,FALSE,FALSE,TRUE,FALSE,FALSE
+156,幻水III,"",サナディ,TRUE,TRUE,FALSE,FALSE,TRUE,行けない。クイーンの故郷の国で、ハルモニアに併合された
+157,幻水III,"",山道,FALSE,FALSE,TRUE,FALSE,FALSE
+158,幻水III,"",シンダルの遺跡,FALSE,FALSE,TRUE,FALSE,FALSE
+159,幻水III,"",石板の地,FALSE,FALSE,TRUE,FALSE,FALSE
+160,幻水III,"",ゼクセンの森,FALSE,FALSE,TRUE,FALSE,FALSE
+161,幻水III,"",ゼクセン連邦,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+162,幻水III,"",セナイ山,FALSE,FALSE,TRUE,FALSE,FALSE
+163,幻水III,グラスランド,大空洞,TRUE,TRUE,FALSE,FALSE,FALSE
+164,幻水III,グラスランド,ダックの村,TRUE,TRUE,FALSE,FALSE,FALSE
+165,幻水III,グラスランド,チシャの村,TRUE,TRUE,FALSE,FALSE,FALSE
+166,幻水III,"",ティント共和国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+167,幻水III,"",デュナン共和国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+168,幻水III,"",トラン共和国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+169,幻水III,"",ハイランド王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+170,幻水III,"",ハルモニア神聖国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+171,幻水III,ゼクセン連邦,ビネ・デル・ゼクセ,TRUE,TRUE,FALSE,FALSE,FALSE
+172,幻水III,"",平頭山,FALSE,FALSE,TRUE,FALSE,FALSE
+173,幻水III,"",炎の英雄の待つ地,FALSE,FALSE,TRUE,FALSE,TRUE,ダンジョンのエリアと居住区とあるけど町ではない…
+174,幻水III,"",無名諸国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+175,幻水III,"",ヤザ平原,FALSE,FALSE,TRUE,FALSE,FALSE
+176,幻水III,ハルモニア神聖国,ルビーク,TRUE,TRUE,FALSE,FALSE,FALSE
+177,幻水III,ハルモニア神聖国,円の宮殿,FALSE,FALSE,FALSE,TRUE,TRUE,建築　一応町扱い……？キャラを動かすことはできないがシーンは存在する
+178,幻水III,"",セイガル門,FALSE,FALSE,FALSE,TRUE,FALSE,建築　ビネ・デル・ゼクセの城門
+179,幻水III,ハルモニア神聖国,ひとつの神殿,FALSE,FALSE,FALSE,TRUE,TRUE,建築　
+180,幻水III,"",秘密基地,FALSE,FALSE,FALSE,TRUE,TRUE,建築　ビネ・デル・ゼクセ街中の子供達の基地
+181,幻水III,"",評議会,FALSE,FALSE,FALSE,TRUE,TRUE,建築
+182,幻水III,ゼクセン連邦,ブラス城,TRUE,TRUE,FALSE,TRUE,FALSE,建築　ゼクセン騎士団の本拠地　町にする？
+183,幻水III,"",ブラス城の抜け道,FALSE,FALSE,FALSE,TRUE,TRUE,建築　
+184,幻水III,"",虫使いの祭壇,FALSE,FALSE,FALSE,TRUE,TRUE,建築　
+185,幻水III,"",ビュッデヒュッケ城,TRUE,TRUE,FALSE,TRUE,FALSE,本拠地　と重複  -> 「（本拠地）」をつけようとしたが蛇足なのでそのままで
+186,幻水III,"",本拠地,FALSE,TRUE,FALSE,FALSE,FALSE,ビュッデヒュッケ城　と重複 -> ビュッデヒュッケ城 に寄せる
+187,幻水IV,"",赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+188,幻水IV,群島諸国,庵の小島,TRUE,TRUE,FALSE,FALSE,FALSE,敵も出る
+189,幻水IV,"",石切りが原,FALSE,FALSE,TRUE,FALSE,FALSE
+190,幻水IV,群島諸国,イルヤ島,TRUE,TRUE,FALSE,FALSE,FALSE,破壊された街　モンスターは出る
+191,幻水IV,群島諸国,エルフの集落,FALSE,FALSE,FALSE,FALSE,TRUE,"ゲーム内ではちゃんとした集落が出ていない
+→ナ・ナル島の奥にあるらしい"
+192,幻水IV,"",エルフの大樹,FALSE,FALSE,FALSE,FALSE,TRUE,敵は出ないが集落でもない
+193,幻水IV,"",オベル王国,TRUE,TRUE,FALSE,FALSE,FALSE,国名　ゲーム的には街と同じ
+194,幻水IV,"",ガイエン公国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+195,幻水IV,群島諸国,海賊島,TRUE,TRUE,FALSE,FALSE,FALSE
+196,幻水IV,"",クールーク皇国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+197,幻水IV,"",群島諸国,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+198,幻水IV,"",山塊の島,FALSE,FALSE,FALSE,FALSE,TRUE,無人島
+199,幻水IV,"",石灰棚の島,FALSE,FALSE,FALSE,FALSE,TRUE,無人島
+200,幻水IV,"",ドーナッツ島,FALSE,FALSE,FALSE,FALSE,TRUE,無人島
+201,幻水IV,"",トラン地方,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+202,幻水IV,群島諸国,ナ・ナル島,TRUE,TRUE,TRUE,FALSE,FALSE,一部がダンジョン
+203,幻水IV,群島諸国,ネイ島,TRUE,TRUE,TRUE,FALSE,FALSE,一部がダンジョン
+204,幻水IV,群島諸国,ネコボルトの集落,FALSE,FALSE,FALSE,FALSE,TRUE,ネイ島の一部
+205,幻水IV,群島諸国,ミドルポート,TRUE,TRUE,FALSE,FALSE,FALSE
+206,幻水IV,"",無人島,TRUE,TRUE,TRUE,FALSE,FALSE,"無人島ENDがあるので特別に街扱いでいい気もする
+→ok"
+207,幻水IV,"",モルド島,TRUE,TRUE,FALSE,FALSE,TRUE,交易所はあるが集落はない？　→街でok
+208,幻水IV,ガイエン公国,ラズリル,TRUE,TRUE,FALSE,FALSE,FALSE
+209,幻水IV,"",エルイール要塞,TRUE,FALSE,TRUE,TRUE,FALSE,"建築　敵の街はここしかない
+ラプソのエルイール要塞跡（エルイール要塞）と同じ票で集計"
+210,幻水IV,"",オベル遺跡,FALSE,FALSE,TRUE,TRUE,FALSE,建築　
+211,幻水IV,"",オベル王宮,FALSE,FALSE,FALSE,TRUE,TRUE,建築　オベルの一部
+212,幻水IV,"",ガイエン海上騎士団の館,FALSE,FALSE,FALSE,TRUE,TRUE,建築　ラズリルの一部
+213,幻水IV,"",霧の船,FALSE,FALSE,TRUE,FALSE,TRUE,ダンジョン？　極の分類は「船」
+214,幻水IV,"",城主の館,FALSE,FALSE,FALSE,TRUE,TRUE,建築　ラズリルの一部
+215,幻水IV,"",本拠地,TRUE,TRUE,FALSE,FALSE,FALSE,建築　船
+216,ラプソディア,"",赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+217,ラプソディア,群島諸国,庵の小島,TRUE,TRUE,FALSE,FALSE,FALSE
+218,ラプソディア,群島諸国,イルヤ島,TRUE,TRUE,TRUE,FALSE,FALSE
+219,ラプソディア,クールーク皇国,運河の町メルセト,TRUE,TRUE,FALSE,FALSE,FALSE
+220,ラプソディア,クールーク皇国,エルイール要塞跡（エルイール要塞）,TRUE,TRUE,TRUE,FALSE,FALSE,4のエルイール要塞と同じ票で集計
+221,ラプソディア,群島諸国,オベル王国,TRUE,TRUE,FALSE,FALSE,TRUE
+222,ラプソディア,"",ガイエン公国,FALSE,FALSE,FALSE,FALSE,TRUE
+223,ラプソディア,群島諸国,海賊島,TRUE,TRUE,FALSE,FALSE,FALSE
+224,ラプソディア,"",クールーク皇国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+225,ラプソディア,"",群島諸国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+226,ラプソディア,クールーク皇国,皇都グラスカ,TRUE,TRUE,TRUE,FALSE,FALSE,クールーク皇国の首都
+227,ラプソディア,"",国境の小さな村,TRUE,TRUE,FALSE,FALSE,FALSE
+228,ラプソディア,"",ザスタ草原,FALSE,FALSE,TRUE,FALSE,FALSE
+229,ラプソディア,"",テラナー平原,FALSE,FALSE,TRUE,FALSE,FALSE
+230,ラプソディア,"",トラン地方,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+231,ラプソディア,群島諸国,ナ・ナル島,TRUE,TRUE,FALSE,FALSE,FALSE
+232,ラプソディア,群島諸国,ネイ島,TRUE,TRUE,FALSE,FALSE,FALSE
+233,ラプソディア,クールーク皇国,辺境の町ハルナ,TRUE,TRUE,FALSE,FALSE,FALSE
+234,ラプソディア,クールーク皇国,ミドーの浅瀬,FALSE,FALSE,TRUE,FALSE,FALSE
+235,ラプソディア,群島諸国,ミドルポート,TRUE,TRUE,FALSE,FALSE,FALSE
+236,ラプソディア,"",無人島,TRUE,TRUE,FALSE,FALSE,FALSE,4に合わせる
+237,ラプソディア,"",ラズリル,TRUE,TRUE,FALSE,FALSE,FALSE
+238,ラプソディア,"",オベル遺跡,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+239,ラプソディア,"",オベル王宮,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+240,ラプソディア,"",カレルロン研究所,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+241,ラプソディア,"",グラスカ宮殿,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+242,ラプソディア,"",コランバルの廃墟,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+243,ラプソディア,"",長老派秘密施設,FALSE,FALSE,FALSE,TRUE,FALSE,建築
+244,幻水V,"",アーメス新王国,TRUE,TRUE,FALSE,FALSE,TRUE,国名　他と被る選択肢ではないので入れてok
+245,幻水V,"",赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+246,幻水V,？,アルセイド,TRUE,TRUE,FALSE,FALSE,TRUE,"エルフの里。地名としては出ているがゲーム内では詳細不明
+→他と被る選択肢ではないので入れてok"
+247,幻水V,ファレナ女王国,エストライズ,TRUE,TRUE,FALSE,FALSE,FALSE
+248,幻水V,"",古代アーメス王朝,FALSE,FALSE,FALSE,FALSE,TRUE,亡国の王朝
+249,幻水V,ファレナ女王国,ゴルディアス,TRUE,TRUE,FALSE,FALSE,FALSE,集落
+250,幻水V,ファレナ女王国,サウロニクス城,TRUE,TRUE,FALSE,FALSE,FALSE,竜馬騎兵団の本拠地
+251,幻水V,"",始祖の地,FALSE,FALSE,TRUE,FALSE,FALSE
+252,幻水V,ファレナ女王国,ストームフィスト,TRUE,TRUE,TRUE,FALSE,FALSE,街でもあるがダンジョンでもある →街でok
+253,幻水V,ファレナ女王国,スピナクス港,TRUE,TRUE,FALSE,FALSE,FALSE
+254,幻水V,"",ゼアラント王国,TRUE,TRUE,FALSE,FALSE,TRUE,国名　他と被る選択肢ではないので入れてok
+255,幻水V,ファレナ女王国,セーブル,TRUE,TRUE,FALSE,FALSE,FALSE
+256,幻水V,ファレナ女王国,ソルファレナ,TRUE,TRUE,FALSE,FALSE,FALSE
+257,幻水V,"",ドラート,TRUE,TRUE,FALSE,FALSE,FALSE,極は「ドラート要塞」攻略本、ビッキーのテレポートは「ドラート」
+258,幻水V,ファレナ女王国,ドワーフキャンプ,TRUE,TRUE,FALSE,FALSE,FALSE
+259,幻水V,"",ナガール教主国,TRUE,TRUE,FALSE,FALSE,TRUE,国名　他と被る選択肢ではないので入れてok
+260,幻水V,"",ニルバ島,TRUE,TRUE,FALSE,FALSE,FALSE,独立貿易都市なので国名なし
+261,幻水V,ファレナ女王国,ハーシュビル軍港,TRUE,TRUE,FALSE,FALSE,FALSE
+262,幻水V,ファレナ女王国,ハウド村,TRUE,TRUE,FALSE,FALSE,FALSE
+263,幻水V,"",バスカ鉱山,FALSE,FALSE,TRUE,FALSE,FALSE
+264,幻水V,"",ハルモニア神聖国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+265,幻水V,ファレナ女王国,ビーバーロッジ,TRUE,TRUE,FALSE,FALSE,FALSE,集落
+266,幻水V,"",ファレナ女王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名
+267,幻水V,"",フェイタス河,FALSE,FALSE,FALSE,FALSE,TRUE,地名
+268,幻水V,"",深き薄明の森,FALSE,FALSE,TRUE,FALSE,FALSE
+269,幻水V,"",船の墓場,FALSE,FALSE,TRUE,FALSE,FALSE
+270,幻水V,ファレナ女王国,ヤシュナ村,TRUE,TRUE,FALSE,FALSE,FALSE
+271,幻水V,ファレナ女王国,ラフトフリート,TRUE,TRUE,FALSE,FALSE,FALSE
+272,幻水V,"",乱稜山,FALSE,FALSE,TRUE,FALSE,FALSE
+273,幻水V,ファレナ女王国,ルナス,TRUE,TRUE,FALSE,FALSE,FALSE,村
+274,幻水V,ファレナ女王国,レインウォール,TRUE,TRUE,FALSE,FALSE,FALSE
+275,幻水V,ファレナ女王国,レルカー,TRUE,TRUE,FALSE,FALSE,FALSE
+276,幻水V,ファレナ女王国,ロードレイク,TRUE,TRUE,FALSE,FALSE,FALSE
+277,幻水V,ファレナ女王国,アゲイト監獄,FALSE,FALSE,TRUE,TRUE,FALSE,建築　人も住んでいるがゲームとしてはダンジョン
+278,幻水V,"",回転橋,FALSE,FALSE,TRUE,TRUE,FALSE,建築　人も住んでいるがゲームとしてはダンジョン
+279,幻水V,"",古代遺跡,FALSE,FALSE,TRUE,TRUE,FALSE,建築　人も住んでいるがゲームとしてはダンジョン
+280,幻水V,"",セラス湖の遺跡,FALSE,FALSE,TRUE,TRUE,FALSE,建築　人も住んでいるがゲームとしてはダンジョン
+281,幻水V,ファレナ女王国,太陽宮,FALSE,FALSE,FALSE,TRUE,FALSE,建築　ソルファレナに含みでいいような？→ok
+282,幻水V,ファレナ女王国,闘技場,FALSE,FALSE,FALSE,TRUE,FALSE,建築　ストームフィスト内の施設　ストームフィストにまとめていい？→ok
+283,幻水V,"",ドラート要塞,FALSE,FALSE,TRUE,TRUE,FALSE,建築　住人が居て攻略後はCPUと会話もできるので街に入れてもいい？ゲーム本編では「ドラート」のみの表記。太陽宮（ソルファレナ）やバロウズ邸（レインウォール）と同様に、「ドラート」として一つにまとめてもいいかもしれない　→ドラートで街でok
+284,幻水V,ファレナ女王国,西の離宮,FALSE,FALSE,FALSE,TRUE,TRUE,建築　マップ上にはある　ダンジョンではない
+285,幻水V,ファレナ女王国,バロウズ邸,FALSE,FALSE,FALSE,TRUE,FALSE,建築　レインウォールの町中にあるのでレインウォールに集約で良さそう？
+286,幻水V,ファレナ女王国,東の離宮,FALSE,FALSE,FALSE,TRUE,TRUE,建築　マップ上にはある　ダンジョンではない
+287,幻水V,"",ヘイトリッド城塞,FALSE,FALSE,FALSE,TRUE,TRUE,"建築　イベントで外観が出ただけで中には入れなかったはず…
+→攻略後は水攻めによって流される。CPUの配置はなく、探索も不可能。跡地には入ることができるのみ（跡地を眺められるだけ）なので街にもダンジョンにも該当しないと思われる"
+288,幻水V,"",竜馬の巣,FALSE,FALSE,TRUE,TRUE,FALSE,建築　
+289,幻水V,ファレナ女王国,本拠地,TRUE,TRUE,FALSE,TRUE,FALSE,建築　
+290,TK,アストラシア王国,アストラシア王国,FALSE,FALSE,FALSE,FALSE,TRUE,国名　首都はファラモン
+291,TK,"",ヴェアルの荒野,FALSE,FALSE,TRUE,FALSE,FALSE
+292,TK,ジャナム魔道帝国,エル・カーラル,TRUE,TRUE,FALSE,FALSE,FALSE,ジャナム魔道帝国の首都
+293,TK,"",海岸の洞窟,FALSE,FALSE,TRUE,FALSE,FALSE
+294,TK,"",北マルシナ丘陵,FALSE,FALSE,TRUE,FALSE,FALSE
+295,TK,"",ギネの谷,FALSE,FALSE,TRUE,FALSE,FALSE
+296,TK,"",クラグバーク,TRUE,TRUE,FALSE,FALSE,FALSE,国に属さない
+297,TK,"",グレイリッジ,TRUE,TRUE,FALSE,FALSE,FALSE,国ではない。ひとつの道の協会の支配下
+298,TK,"",グレイリッジ鉱山,FALSE,FALSE,TRUE,FALSE,FALSE
+299,TK,"",ケアロヒラニ島,FALSE,FALSE,FALSE,FALSE,TRUE,ロノマクア諸島の無人島のひとつ　ドロモンが隠れ家にしていた　ロノマクア首長国があるので投票対象には入れない
+300,TK,"",サイナス,TRUE,TRUE,FALSE,FALSE,FALSE,国ではない。ひとつの道の協会の支配下　→敵の街
+301,TK,"",サイナスに似た街,FALSE,FALSE,FALSE,FALSE,TRUE,元々は街だけどゲーム中ではダンジョン扱い？人はいない
+302,TK,ジャナム魔道帝国,サルサビル,TRUE,TRUE,FALSE,FALSE,FALSE
+303,TK,"",シトロ平原,FALSE,FALSE,TRUE,FALSE,FALSE
+304,TK,"",シトロ村,TRUE,TRUE,FALSE,FALSE,FALSE,独立村落
+305,TK,"",ジャナム砂漠,FALSE,FALSE,TRUE,FALSE,FALSE
+306,TK,ジャナム魔道帝国,ジャナム魔道帝国,FALSE,FALSE,FALSE,FALSE,TRUE,国名　首都はエル・カーラル
+307,TK,"",樹海の集落,TRUE,TRUE,FALSE,FALSE,FALSE,国に属さない
+308,TK,"",スヴァトゴル山,FALSE,FALSE,TRUE,FALSE,FALSE
+309,TK,"",チオルイ山脈,FALSE,FALSE,TRUE,FALSE,FALSE
+310,TK,"",テハの村,TRUE,TRUE,FALSE,FALSE,FALSE,国に属さない
+311,TK,"",ナイネニス,TRUE,TRUE,FALSE,FALSE,FALSE,国に属さない
+312,TK,"",ノスロウの樹海,FALSE,FALSE,TRUE,FALSE,FALSE
+313,TK,"",東の丘,FALSE,FALSE,TRUE,FALSE,FALSE
+314,TK,アストラシア王国,ファラモン,TRUE,TRUE,FALSE,FALSE,FALSE
+315,TK,"",フレセリアの森,FALSE,FALSE,TRUE,FALSE,FALSE
+316,TK,"",北辰皇国,TRUE,FALSE,FALSE,FALSE,TRUE,国名だけどゲーム中に他に街が出てこない　→投票対象でok
+317,TK,"",マルシナ平原,FALSE,FALSE,TRUE,FALSE,FALSE
+318,TK,"",ミスラト川,FALSE,FALSE,TRUE,FALSE,FALSE
+319,TK,"",ライテルシルト連合王国,TRUE,FALSE,FALSE,FALSE,TRUE,国名だけどゲーム中に他に街が出てこない→首都名だけ出てたっけ？確認が必要　→街はなし　投票対象でok
+320,TK,"",ラロヘンガ,FALSE,FALSE,TRUE,FALSE,FALSE
+321,TK,"",ルギエニク,TRUE,TRUE,FALSE,FALSE,FALSE
+322,TK,"",ロノマクア首長国,TRUE,FALSE,FALSE,FALSE,TRUE,国名だけどゲーム中に他に街が出てこない→首都名だけ出てたっけ？確認が必要　→街はなし　投票対象でok
+323,TK,"",一なる王の像,FALSE,FALSE,TRUE,TRUE,FALSE
+324,TK,"",しるべの塔,FALSE,FALSE,TRUE,TRUE,FALSE,ひとつの道の協会本部
+325,TK,"",謎の遺跡,FALSE,FALSE,TRUE,TRUE,FALSE,複数ある
+326,TK,"",フォートアーク,FALSE,FALSE,TRUE,TRUE,FALSE,"追加しました。町ではなく、途中までダンジョン扱いだが終盤はエンカウント無し
+砦？→ダンジョンでok"
+327,TK,"",森の遺跡,FALSE,FALSE,FALSE,TRUE,FALSE
+328,TK,"",ラザの砦,FALSE,FALSE,TRUE,TRUE,FALSE,"追加しました。町ではなく、戦闘も発生するがダンジョンではないかと・・・
+どちらかというとダンジョン →通過するだけの場所なのでok"
+329,TK,"",本拠地,TRUE,TRUE,FALSE,FALSE,FALSE,国に属さない
+330,紡時,アイオニア聖皇国,アクリテス,TRUE,TRUE,FALSE,FALSE,FALSE
+331,紡時,"",オロスク村,TRUE,TRUE,FALSE,FALSE,FALSE
+332,紡時,"",グーグレウォン,TRUE,TRUE,FALSE,FALSE,FALSE
+333,紡時,"",シュラート,TRUE,TRUE,FALSE,FALSE,FALSE
+334,紡時,アイオニア聖皇国,聖都タクシス,TRUE,TRUE,FALSE,FALSE,FALSE,敵の本拠地的な
+335,紡時,"",ゼフテロス砦,TRUE,TRUE,TRUE,FALSE,FALSE,紡時時間軸だとダンジョン？200年前は砦で一応行くこともできる。200年前の勢力の本拠地。
+336,紡時,"",ティオス砦,TRUE,TRUE,FALSE,FALSE,FALSE,「ディオス砦」は誤り
+337,紡時,"",テルベの里,TRUE,TRUE,FALSE,FALSE,FALSE
+338,紡時,"",廃都マルティリオン,TRUE,TRUE,FALSE,FALSE,FALSE,ダンジョンではないし、メインキャラの故郷だったり関連エピソードが多いので投票できたほうがよさそう
+339,紡時,"",バヤン・オアシス,TRUE,TRUE,FALSE,FALSE,FALSE
+340,紡時,"",フェアピーク,TRUE,TRUE,FALSE,FALSE,FALSE
+341,紡時,"",ヒオニ村,TRUE,TRUE,FALSE,FALSE,FALSE
+342,紡時,"",ホドス村,TRUE,TRUE,FALSE,FALSE,FALSE
+343,紡時,"",港町ナヴァレ,TRUE,TRUE,FALSE,FALSE,FALSE
+344,紡時,"",本拠地,TRUE,TRUE,FALSE,FALSE,FALSE,湖の砦

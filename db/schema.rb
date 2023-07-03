@@ -15,51 +15,52 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_03_164804) do
   enable_extension "plpgsql"
 
   create_table "on_sheet_gss_section_cities", force: :cascade do |t|
-    t.string "product_name", null: false, comment: "タイトル名"
-    t.string "country_name", default: "", null: false, comment: "国名"
-    t.string "city_name", null: false, comment: "都市名"
-    t.boolean "is_available", default: false, null: false, comment: "利用可能かどうか"
-    t.boolean "is_town_or_village_or_city", default: false, null: false, comment: "町か村か都市か"
-    t.boolean "is_dungeon", default: false, null: false, comment: "ダンジョンかどうか"
-    t.boolean "is_architecture", default: false, null: false, comment: "建造物かどうか"
-    t.boolean "is_others", default: false, null: false, comment: "その他かどうか"
-    t.string "memo", default: "", null: false, comment: "備考"
+    t.string "product_name", comment: "タイトル名"
+    t.string "country_name", comment: "国名"
+    t.string "city_name", comment: "都市名"
+    t.boolean "is_available", comment: "利用可能かどうか"
+    t.boolean "is_town_or_village_or_city", comment: "町か村か都市か"
+    t.boolean "is_dungeon", comment: "ダンジョンかどうか"
+    t.boolean "is_architecture", comment: "建造物かどうか"
+    t.boolean "is_others", comment: "その他かどうか"
+    t.string "memo", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "on_sheet_gss_section_hq_characters", force: :cascade do |t|
-    t.boolean "is_available", default: false, null: false, comment: "利用可能かどうか"
-    t.string "product_name", null: false, comment: "タイトル名"
-    t.string "character_name", null: false, comment: "キャラクター名"
-    t.string "facility_or_position_name", default: "", null: false, comment: "施設名・役職名"
-    t.string "role_of_hq_on_system", default: "", null: false, comment: "本拠地での役割（システム面）"
-    t.string "note", default: "", null: false, comment: "備考"
+    t.boolean "is_available", comment: "利用可能かどうか"
+    t.string "product_name", comment: "タイトル名"
+    t.string "character_name", comment: "キャラクター名"
+    t.string "facility_or_position_name", comment: "施設名・役職名"
+    t.string "role_of_hq_on_system", comment: "本拠地での役割（システム面）"
+    t.string "note", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_name", "character_name"], name: "index_gss_section_hq_characters_on_product_and_character", unique: true
   end
 
   create_table "on_sheet_platforms", force: :cascade do |t|
-    t.string "name", null: false, comment: "ゲーム機の機種名"
-    t.string "name_en", null: false, comment: "ゲーム機の機種名（英語）"
-    t.string "nickname", null: false, comment: "ゲーム機の略称"
+    t.string "name", comment: "ゲーム機の機種名"
+    t.string "name_en", comment: "ゲーム機の機種名（英語）"
+    t.string "nickname", comment: "ゲーム機の略称"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_on_sheet_platforms_on_name", unique: true
+    t.index ["name_en"], name: "index_on_sheet_platforms_on_name_en", unique: true
   end
 
   create_table "on_sheet_stars", force: :cascade do |t|
-    t.string "seating_order", null: false, comment: "108星の順番"
-    t.string "name", null: false, comment: "108星の名前"
-    t.string "name_en", null: false, comment: "108星の英語名"
+    t.string "seating_order", comment: "108星の順番"
+    t.string "name", comment: "108星の名前"
+    t.string "name_en", comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["seating_order"], name: "index_on_sheet_stars_on_seating_order", unique: true
   end
 
   create_table "on_sheet_titles", force: :cascade do |t|
-    t.string "name", null: false, comment: "作品名"
-    t.string "name_en", null: false, comment: "作品名（英語）"
+    t.string "name", comment: "作品名"
+    t.string "name_en", comment: "作品名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_on_sheet_titles_on_name", unique: true
