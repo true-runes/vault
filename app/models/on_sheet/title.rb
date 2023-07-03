@@ -1,2 +1,4 @@
-class OnSheet::Title < ApplicationRecord
+module OnSheet
+  class Title < ApplicationRecord
+  end
 end

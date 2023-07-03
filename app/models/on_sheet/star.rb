@@ -1,2 +1,4 @@
-class OnSheet::Star < ApplicationRecord
+module OnSheet
+  class Star < ApplicationRecord
+  end
 end
