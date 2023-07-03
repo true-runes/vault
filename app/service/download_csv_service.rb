@@ -12,6 +12,7 @@ class DownloadCsvService
   def execute(filepath)
     csv_contents = CSV.generate do |csv|
       csv << @fetcher.headers
+
       @fetcher.rows.each do |row|
         csv << row
       end
