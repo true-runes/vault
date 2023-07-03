@@ -5,17 +5,19 @@ namespace :db do
       Rake::Task['db:migrate:reset'].invoke
 
       ActiveRecord::Base.transaction do
-        puts "[#{Time.zone.now}] ImportService::OnSheet::Star の実行を開始します。"
-        ImportService::OnSheet::Star.new(
-          csv_filepath: Rails.root.join('db/csv_on_sheet/basic_attributes/stars.csv')
-        ).execute
-        puts "[#{Time.zone.now}] ImportService::OnSheet::Star の実行が終了しました。"
+        show_message_and_execute(
+          'ImportService::OnSheet::Star',
+          Rails.root.join(
+            Rails.root.join('db/csv_on_sheet/basic_attributes/stars.csv')
+          )
+        )
 
-        puts "[#{Time.zone.now}] ImportService::OnSheet::Title の実行を開始します。"
-        ImportService::OnSheet::Title.new(
-          csv_filepath: Rails.root.join('db/csv_on_sheet/products/titles.csv')
-        ).execute
-        puts "[#{Time.zone.now}] ImportService::OnSheet::Title の実行が終了しました。"
+        show_message_and_execute(
+          'ImportService::OnSheet::Title',
+          Rails.root.join(
+            Rails.root.join('db/csv_on_sheet/products/titles.csv')
+          )
+        )
       end
 
       # ERD を出力する
@@ -33,4 +35,15 @@ namespace :db do
       end
     end
   end
+end
+
+def show_message_and_execute(class_name_string, csv_filepath)
+  puts "[#{Time.zone.now}] #{class_name_string} の実行を開始します。"
+
+  klass = class_name_string.constantize
+  klass.new(
+    csv_filepath:
+  ).execute
+
+  puts "[#{Time.zone.now}] #{class_name_string} の実行が終了しました。"
 end
