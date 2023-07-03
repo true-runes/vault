@@ -10,27 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_232155) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_094017) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "stars", force: :cascade do |t|
-    t.string "name", null: false, comment: "宿星の名前（日本語）"
-    t.string "name_en", null: false, comment: "宿星の名前（英語）"
-    t.integer "seating_order", null: false, comment: "席次"
+  create_table "on_sheet_stars", force: :cascade do |t|
+    t.string "seating_order", null: false, comment: "108星の順番"
+    t.string "name", null: false, comment: "108星の名前"
+    t.string "name_en", null: false, comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_stars_on_name", unique: true
-    t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
+    t.index ["seating_order"], name: "index_on_sheet_stars_on_seating_order", unique: true
   end
 
-  create_table "titles", force: :cascade do |t|
-    t.string "name", null: false, comment: "作品タイトル名"
-    t.string "name_en", null: false, comment: "作品タイトル名（英語）"
+  create_table "on_sheet_titles", force: :cascade do |t|
+    t.string "name", null: false, comment: "作品名"
+    t.string "name_en", null: false, comment: "作品名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_titles_on_name", unique: true
-    t.index ["name_en"], name: "index_titles_on_name_en", unique: true
+    t.index ["name"], name: "index_on_sheet_titles_on_name", unique: true
+    t.index ["name_en"], name: "index_on_sheet_titles_on_name_en", unique: true
   end
 
 end
