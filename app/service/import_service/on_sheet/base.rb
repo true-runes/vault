@@ -1,7 +1,7 @@
 module ImportService
   module OnSheet
     class Base
-      attr_reader :data_table
+      attr_reader :data_table, :headers, :rows
 
       def initialize(
         data_source: :csv,
@@ -19,8 +19,23 @@ module ImportService
                         data_table_from_csv(csv_filepath:)
                       end
 
-        @headers = headers
-        @rows = rows
+        # headers
+        begin
+          @headers = @data_table.headers.map(&:to_sym)
+        rescue StandardError => e
+          puts
+          puts e.message
+          puts "#{Time.zone.now} [LOG] エラー: ワークシートの読み込みに失敗しました。"
+          puts 'シンボルに変換できない文字列が以下のヘッダに含まれています。'
+          puts @data_table.headers
+
+          raise
+        end
+
+        # rows
+        raise '1列目 の "id" 列の値が空白のセルが存在します。終了します。' if @data_table.rows.find { |row| row[0].nil? }
+
+        @rows = @data_table.rows
       end
 
       def execute
@@ -45,24 +60,16 @@ module ImportService
         imported_class_str.classify.safe_constantize
       end
 
-      def headers
-        @data_table.headers.map(&:to_sym)
-      end
-
       def headers_without_id_column
         # id の列が存在する場合には取り除く
         headers.delete_if { |column| column == :id }
-      end
-
-      def rows
-        @data_table.rows
       end
 
       def rows_without_id_column
         # id の列が存在する場合には取り除く
         # rows は [1, 2, 3, 4, 5] の形
         # NOTE: id は 1つ目の要素 であることは仕様とする
-        rows.map { |value| value[1..] }
+        @rows.map { |value| value[1..] }
       end
 
       def data_table_from_csv(csv_filepath:)

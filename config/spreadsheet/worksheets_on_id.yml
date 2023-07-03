@@ -21,11 +21,16 @@ characters:
     - bases
 
 gss_hq_characters_section:
-  id: ENV.fetch('SPREADSHEET_ID_HQ_CHARACTERS_SECTION')
+  id: ENV.fetch('SPREADSHEET_ID_GSS_HQ_CHARACTERS_SECTION')
   worksheet_names:
     - web_format_data
 
 gss_cities_section:
-  id: ENV.fetch('SPREADSHEET_ID_CITIES_SECTION')
+  id: ENV.fetch('SPREADSHEET_ID_GSS_CITIES_SECTION')
+  worksheet_names:
+    - web_format_data
+
+gss_character:
+  id: ENV.fetch('SPREADSHEET_ID_GSS_CHARACTER')
   worksheet_names:
     - web_format_data
