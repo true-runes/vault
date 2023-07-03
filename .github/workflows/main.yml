@@ -34,5 +34,5 @@ jobs:
           bundler-cache: true
       - name: RuboCop を実行する
         run: bundle exec rubocop
-      - name: RSpec を実行する（保留中）
-        run: echo "bundle exec rspec"
+      - name: RSpec を実行する
+        run: bundle exec rspec

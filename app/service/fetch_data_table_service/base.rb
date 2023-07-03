@@ -4,6 +4,13 @@ module FetchDataTableService
       # TODO: 書く
     end
 
+    def hello
+      a = 'world'
+      b = 'hello'
+
+      "#{b} #{a}!"
+    end
+
     def headers
       raise NotImplementedError
     end
@@ -17,3 +24,5 @@ module FetchDataTableService
     end
   end
 end
+
+FetchDataTableService::Base.new.hello
