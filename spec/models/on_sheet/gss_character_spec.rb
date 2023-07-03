@@ -13,5 +13,17 @@ RSpec.describe OnSheet::GssCharacter, type: :model do
 
       expect(character.gensosenkyo_name).to eq 'ルセリナ・バロウズ'
     end
+
+    it '"名前" が "ゴンボスレン" のキャラがいること' do
+      character = OnSheet::GssCharacter.find_by(name: 'ゴンボスレン')
+
+      expect(character).not_to be_nil
+    end
+
+    it '"名前" が "ゴンポスレン" のキャラ (typo) はいないこと' do
+      character = OnSheet::GssCharacter.find_by(name: 'ゴンポスレン')
+
+      expect(character).to be_nil
+    end
   end
 end
