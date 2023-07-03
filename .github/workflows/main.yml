@@ -14,6 +14,7 @@ on:
 
 env:
   TZ: Asia/Tokyo
+  RAILS_ENV: test
 
 jobs:
   ci:
@@ -45,11 +46,16 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      - name: RuboCop を実行する
+        run: |
+          bundle exec rubocop
       - name: データベースをセットアップする
         run: |
           bundle exec rails db:create
           bundle exec rails db:migrate
-      - name: RuboCop を実行する
-        run: bundle exec rubocop
+      - name: インポータを実行する
+        run: |
+          bundle exec rails db:reconstruction:execute
       - name: RSpec を実行する
-        run: bundle exec rspec
+        run: |
+          bundle exec rspec
