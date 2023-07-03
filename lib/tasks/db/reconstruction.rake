@@ -4,20 +4,22 @@ namespace :db do
     task execute: :environment do
       Rake::Task['db:migrate:reset'].invoke
 
-      ActiveRecord::Base.transaction do
-        show_message_and_execute(
-          'ImportService::OnSheet::Star',
-          Rails.root.join(
-            Rails.root.join('db/csv_on_sheet/basic_attributes/stars.csv')
-          )
+      class_name_to_csv_filepath_map = {
+        'ImportService::OnSheet::Star' => Rails.root.join(
+          Rails.root.join('db/csv_on_sheet/basic_attributes/stars.csv')
+        ),
+        'ImportService::OnSheet::Title' => Rails.root.join(
+          Rails.root.join('db/csv_on_sheet/products/titles.csv')
+        ),
+        'ImportService::OnSheet::Platform' => Rails.root.join(
+          Rails.root.join('db/csv_on_sheet/basic_attributes/platforms.csv')
         )
+      }
 
-        show_message_and_execute(
-          'ImportService::OnSheet::Title',
-          Rails.root.join(
-            Rails.root.join('db/csv_on_sheet/products/titles.csv')
-          )
-        )
+      ActiveRecord::Base.transaction do
+        class_name_to_csv_filepath_map.each do |class_name_string, csv_filepath|
+          show_message_and_execute(class_name_string, csv_filepath)
+        end
       end
 
       # ERD を出力する

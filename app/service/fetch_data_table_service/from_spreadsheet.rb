@@ -19,6 +19,11 @@ module FetchDataTableService
 
     def headers
       @worksheet_manager.headers
+    rescue StandardError
+      puts "#{Time.zone.now} [LOG] エラー: ワークシートの読み込みに失敗しました。"
+      puts "ワークシート名: #{worksheet_name}"
+      puts e.message
+      puts
     end
 
     def rows
@@ -46,11 +51,15 @@ module FetchDataTableService
     end
 
     def worksheet_manager(sheets_api, spreadsheet, worksheet_name)
-      SpreadsheetService::WorksheetManager.new(
+      worksheet_manager = SpreadsheetService::WorksheetManager.new(
         sheets_api,
         spreadsheet,
         worksheet_name
       )
+
+      raise if worksheet_manager.nil?
+
+      worksheet_manager
     end
   end
 end
