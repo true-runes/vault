@@ -7,7 +7,7 @@
 - `config/spreadsheet/worksheets_on_id.yml`
 
 #### 2. CSV に書き出すタスクを実行する
-- `db/csv` 配下に CSVファイル が保存されていく
+- `db/csv_on_sheet` 配下に CSVファイル が保存されていく
 
 ```bash
 $ bundle exec rails db:download_csv:execute
