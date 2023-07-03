@@ -14,6 +14,7 @@ on:
 
 env:
   TZ: Asia/Tokyo
+  RAILS_ENV: test
 
 jobs:
   ci:
