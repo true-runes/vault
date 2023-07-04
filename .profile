@@ -5,5 +5,5 @@
 
 /usr/bin/openssl aes-256-cbc -d -pbkdf2 -in config/postgresql/root.crt.bin -out config/postgresql/root.crt -k "$OPENSSL_DECRYPT_PASSWORD"
 
-bin/rails db:create
-bin/rails db:migrate
+RAILS_ENV=staging bin/rails db:create
+RAILS_ENV=staging bin/rails db:migrate
