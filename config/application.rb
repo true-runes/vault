@@ -21,7 +21,7 @@ module Vault
       generator.test_framework(
         :rspec,
         fixtures: false, # データの性質上、インポートした実データを用いるので原則不要
-        controller_specs: true,
+        controller_specs: false, # APIモードなので request spec のみとする
         helper_specs: false,
         routing_specs: false
       )
