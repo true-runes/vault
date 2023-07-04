@@ -1,4 +1,9 @@
-./heroku_release_script.sh
+# $ heroku run bash するたびに実行されるので、書く内容には注意する
+/usr/bin/openssl aes-256-cbc -d -pbkdf2 -in config/postgresql/client.crt.bin -out config/postgresql/client.crt -k "$OPENSSL_DECRYPT_PASSWORD"
 
-# $ heroku run bash する度に実行されることを防ぎ、デプロイ時だけ実行されるようにする
-mv .profile .profile.bak
+/usr/bin/openssl aes-256-cbc -d -pbkdf2 -in config/postgresql/client.key.bin -out config/postgresql/client.key -k "$OPENSSL_DECRYPT_PASSWORD"
+
+/usr/bin/openssl aes-256-cbc -d -pbkdf2 -in config/postgresql/root.crt.bin -out config/postgresql/root.crt -k "$OPENSSL_DECRYPT_PASSWORD"
+
+bin/rails db:create
+bin/rails db:migrate
