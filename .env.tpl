@@ -20,9 +20,10 @@ PG_PRODUCTION_HOST=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/hostname
 PG_PRODUCTION_PORT=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/port
 PG_PRODUCTION_USER=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/username
 PG_PRODUCTION_PASS=op://Personal/irwrv7xiofnmimbcdz7d3wclqi/password
-PG_SSLCERT_PATH=
-PG_SSLKEY_PATH=
-PG_SSLROOT_PATH=
+# 空文字指定だと ENV['PG_SSLCERT_PATH'] は true になるので、そもそも指定してはいけない
+# PG_SSLCERT_PATH=
+# PG_SSLKEY_PATH=
+# PG_SSLROOT_PATH=
 
 # スプレッドシートID
 SPREADSHEET_ID_BASIC_ATTRIBUTES=op://Personal/nouerwwfqtd67aeagpyrug3kiq/fudicawf773buqbjztwh3xzmeu/basic_attributes
