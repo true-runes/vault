@@ -1,2 +1,4 @@
-echo 'hello dot profile world' > tmp/this_is_touched_file_by_dot_profile
+./heroku_release_script.sh
+
+# $ heroku run bash する度に実行されることを防ぎ、デプロイ時だけ実行されるようにする
 mv .profile .profile.bak
