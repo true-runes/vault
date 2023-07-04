@@ -18,7 +18,7 @@ $ bundle exec rails db:download_csv:execute
 - インポートが正常に完了すると `db` 配下に ER図 が生成される
 
 ```bash
-$ bundle exec rails db:reconstruction:execute
+$ bundle exec rails db:construction:execute
 ```
 
 # Tips
@@ -47,7 +47,8 @@ irb> o.header_to_rows
     - ワークシートの名前およびカラムの名前が英数字であること
     - 一番左に id列 をもつこと
 - ワークシートの共有アドレスに creds のアドレスを追加する
-- それぞれを 環境変数 と YAML に書く
+  - 全世界公開だと不要だが、原則入れる癖をつける
+- シートのID と ワークシートの名前 を 環境変数 と YAML に書く
 - モデルを作成する
 - マイグレーションを行う
   - 制約は緩くていい
@@ -55,6 +56,5 @@ irb> o.header_to_rows
   - 実際は Base の継承だけでいいので中身は書く必要はない
   - ファイル名とクラス名を規約に沿わす
 - Rake タスクにインポータを追記する
-  - `lib/tasks/db/reconstruction.rake`
 - 一括実行スクリプトでインポートする
 - できればテストを書く
