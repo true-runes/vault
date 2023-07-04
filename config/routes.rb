@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # /api/v1/stars で index を返す
+  namespace :api, { format: 'json' } do
+    namespace :v1 do
+      resources :stars, only: [:index]
+    end
+  end
 end
