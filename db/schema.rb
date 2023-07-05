@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_143104) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,36 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
   create_table "characters", force: :cascade do |t|
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "on_sheet_characters", force: :cascade do |t|
+    t.string "star_attr", comment: "108星の名前"
+    t.string "s1", comment: "幻水Iでの名前"
+    t.string "s1_yomi", comment: "幻水Iでの名前の読み仮名"
+    t.string "s1_en", comment: "幻水Iでの名前（英語）"
+    t.string "s2", comment: "幻水IIでの名前"
+    t.string "s2_yomi", comment: "幻水IIでの名前の読み仮名"
+    t.string "s2_en", comment: "幻水IIでの名前（英語）"
+    t.string "s3", comment: "幻水IIIでの名前"
+    t.string "s3_yomi", comment: "幻水IIIでの名前の読み仮名"
+    t.string "s3_en", comment: "幻水IIIでの名前（英語）"
+    t.string "s4", comment: "幻水IVでの名前"
+    t.string "s4_yomi", comment: "幻水IVでの名前の読み仮名"
+    t.string "s4_en", comment: "幻水IVでの名前（英語）"
+    t.string "s5", comment: "幻水Vでの名前"
+    t.string "s5_yomi", comment: "幻水Vでの名前の読み仮名"
+    t.string "s5_en", comment: "幻水Vでの名前（英語）"
+    t.string "tk", comment: "TKでの名前"
+    t.string "tk_yomi", comment: "TKでの名前の読み仮名"
+    t.string "tk_en", comment: "TKでの名前（英語）"
+    t.string "woven", comment: "紡時での名前"
+    t.string "woven_yomi", comment: "紡時での名前の読み仮名"
+    t.string "woven_en", comment: "紡時での名前（英語）"
+    t.string "water_margin", comment: "水滸伝での名前"
+    t.string "water_margin_yomi", comment: "紡時での名前の読み仮名"
+    t.string "water_margin_en", comment: "水滸伝での名前（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
