@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Star, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'Star クラス' do
+    it 'レコードの数が 108 であること' do
+      stars = Star.all
+
+      expect(stars.count).to eq 108
+    end
+  end
 end
