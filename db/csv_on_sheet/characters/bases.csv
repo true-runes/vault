@@ -1,7 +1,6 @@
-id,star_attr,s1,s1_yomi,s1_en,s2,s2_yomi,s2_en,s3,s3_yomi,s3_en,s4,s4_yomi,s4_en,s5,s5_yomi,s5_en,tk,tk_yomi,tk_en,weaven,weaven_yomi,weaven_en,water_margin,water_margin_en
-1,天魁星,I主人公,わんしゅじんこう,Hero,II主人公,"",Herp,トーマス,"",Thomas,IV主人公,"",Hero,王子,"",Hero,主人公,"",Hero,主人公
-2,天罡星,レパント,れぱんと,Lepant,"リドリー・ワイゼン / 
-ボリス･ワイゼン","",Ridley/Boris,ササライ,"",Sasarai,リノ・エン・クルデス,"",Lino En Kuldes,ラージャ,"",Raja,ダイアルフ,"",Diulf,ジャグワン,"","",盧俊義
+id,star_attr,s1,s1_yomi,s1_en,s2,s2_yomi,s2_en,s3,s3_yomi,s3_en,s4,s4_yomi,s4_en,s5,s5_yomi,s5_en,tk,tk_yomi,tk_en,woven,woven_yomi,woven_en,water_margin,water_margin_yomi,water_margin_en
+1,天魁星,I主人公,わんしゅじんこう,Hero,II主人公,"",Herp,トーマス,"",Thomas,IV主人公,"",Hero,王子,"",Hero,主人公,"",Hero,主人公,"","",宋江
+2,天罡星,レパント,れぱんと,Lepant,リドリー・ワイゼン / ボリス･ワイゼン,"",Ridley/Boris,ササライ,"",Sasarai,リノ・エン・クルデス,"",Lino En Kuldes,ラージャ,"",Raja,ダイアルフ,"",Diulf,ジャグワン,"","",盧俊義
 3,天機星,マッシュ・シルバーバーグ,"",Mathiu,シュウ,"",Shu,シーザー・シルバーバーグ,"",Caesar Silverberg,エレノア・シルバーバーグ,"",Elenor,ルクレティア・メルセス,"",Lucretia Merces,リウ,"",Liu,レギウス,"","",呉用
 4,天間星,ルック,"",Luc,ルック,"",Luc,ルック,"",Luc,テッド,"",Ted,ゼラセ,"",Zerase,ゼノア,"",Zenoa,ゼフォン,"","",公孫勝
 5,天勇星,ハンフリー・ミンツ,"",Humphrey,ハンフリー・ミンツ,"",Humphrey,デュパ,"",Dupa,タル,"",Tal,クレイグ・ラーデン,"",Craig Laden,オルドヴィーク,"",Ordovic,ゴンボスレン,"","",関勝
