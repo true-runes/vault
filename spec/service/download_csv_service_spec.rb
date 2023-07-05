@@ -22,7 +22,7 @@ describe DownloadCsvService do
 
         expect(
           File.open('tmp/vault_test_check_first_row.csv').readline.chomp
-        ).to eq 'id,seating_order,name,name_en'
+        ).to eq 'id,seating_order,category,name,name_kana,name_en'
       end
 
       it '二行目（内容の行の一行目）の内容が期待どおりであること' do
@@ -30,7 +30,7 @@ describe DownloadCsvService do
 
         expect(
           File.open('tmp/vault_test_check_first_row.csv').readlines[1].chomp
-        ).to eq '1,1,天魁星,Leader Star'
+        ).to eq '1,1,0,天魁星,てんかいせい,Leader Star'
       end
     end
   end

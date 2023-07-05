@@ -6,6 +6,7 @@ basic_attributes:
   id: ENV.fetch('SPREADSHEET_ID_BASIC_ATTRIBUTES')
   worksheet_names:
     - stars
+    - water_margin_characters
     - companies
     - platforms
     - tax_rates
