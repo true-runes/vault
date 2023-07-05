@@ -22,6 +22,7 @@ m_Character [label = <<table border="0" align="center" cellspacing="0.5" cellpad
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
   <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
 m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -32,6 +33,39 @@ m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" c
   <tr><td align="left" width="130" port="character_id">character_id <font face="Arial Italic" color="grey60">integer (8) ∗</font></td></tr>
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="star_id">star_id <font face="Arial Italic" color="grey60">integer (8) ∗</font></td></tr>
+</table>
+>];
+"m_OnSheet::Character" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OnSheet::Character</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="s1">s1 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s1_en">s1_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s1_yomi">s1_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s2">s2 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s2_en">s2_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s2_yomi">s2_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s3">s3 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s3_en">s3_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s3_yomi">s3_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s4">s4 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s4_en">s4_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s4_yomi">s4_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s5">s5 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s5_en">s5_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="s5_yomi">s5_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="star_attr">star_attr <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="tk">tk <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="tk_en">tk_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="tk_yomi">tk_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="water_margin">water_margin <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="water_margin_en">water_margin_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="water_margin_yomi">water_margin_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="woven">woven <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="woven_en">woven_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="woven_yomi">woven_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 "m_OnSheet::GssCharacter" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -126,9 +160,10 @@ m_Star [label = <<table border="0" align="center" cellspacing="0.5" cellpadding=
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
-  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
-  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
-  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
 }

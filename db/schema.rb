@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_143104) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143104) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
+    t.string "yomi", default: "", null: false, comment: "キャラ名の読み仮名"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -134,9 +135,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143104) do
   end
 
   create_table "stars", force: :cascade do |t|
-    t.string "seating_order", comment: "108星の順番"
-    t.string "name", comment: "108星の名前"
-    t.string "name_en", comment: "108星の英語名"
+    t.string "seating_order", null: false, comment: "108星の順番"
+    t.string "name", null: false, comment: "108星の名前"
+    t.string "yomi", default: "", null: false, comment: "108星の読み仮名"
+    t.string "name_en", null: false, comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
