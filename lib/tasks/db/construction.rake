@@ -8,7 +8,7 @@ namespace :db do
 
       ActiveRecord::Base.transaction do
         class_name_to_csv_filepath_map.each do |class_name_string, csv_filepath|
-          show_message_and_execute(class_name_string, csv_filepath)
+          show_message_and_execute_on_construction(class_name_string, csv_filepath)
         end
       end
 
@@ -31,7 +31,7 @@ namespace :db do
   end
 end
 
-def show_message_and_execute(class_name_string, csv_filepath)
+def show_message_and_execute_on_construction(class_name_string, csv_filepath)
   puts "[#{Time.zone.now}] #{class_name_string} の実行を開始します。"
 
   klass = class_name_string.constantize
