@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_125445) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "character_to_stars", force: :cascade do |t|
+    t.bigint "character_id", null: false, comment: "キャラクター"
+    t.bigint "star_id", null: false, comment: "108星"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_character_to_stars_on_character_id"
+    t.index ["star_id"], name: "index_character_to_stars_on_star_id"
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
@@ -102,4 +111,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125445) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "character_to_stars", "characters"
+  add_foreign_key "character_to_stars", "stars"
 end
