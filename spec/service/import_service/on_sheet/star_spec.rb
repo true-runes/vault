@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 describe ImportService::OnSheet::Star do
   it 'ソースをもとにしたサービスのオブジェクトが生成されること' do
     expect(
@@ -60,3 +61,4 @@ describe ImportService::OnSheet::Star do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
