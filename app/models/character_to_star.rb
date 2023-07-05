@@ -1,0 +1,2 @@
+class CharacterToStar < ApplicationRecord
+end
