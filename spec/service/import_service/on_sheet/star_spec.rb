@@ -24,7 +24,9 @@ describe ImportService::OnSheet::Star do
       expect(service.headers).to eq %i[
         id
         seating_order
+        category
         name
+        name_kana
         name_en
       ]
     end
@@ -33,7 +35,7 @@ describe ImportService::OnSheet::Star do
       aggregate_failures do
         expect(service.rows.count).to eq 108
         expect(service.rows[0]).to eq [
-          '1', '1', '天魁星', 'Leader Star'
+          '1', '1', '0', '天魁星', 'てんかいせい', 'Leader Star'
         ]
       end
     end
@@ -41,7 +43,9 @@ describe ImportService::OnSheet::Star do
     it 'id列 を取り除いたヘッダが期待どおりであること' do
       expect(service.headers_without_id_column).to eq %i[
         seating_order
+        category
         name
+        name_kana
         name_en
       ]
     end
@@ -50,7 +54,7 @@ describe ImportService::OnSheet::Star do
       aggregate_failures do
         expect(service.rows_without_id_column.count).to eq 108
         expect(service.rows_without_id_column[0]).to eq [
-          '1', '天魁星', 'Leader Star'
+          '1', '0', '天魁星', 'てんかいせい', 'Leader Star'
         ]
       end
     end
