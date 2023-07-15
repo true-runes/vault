@@ -1,9 +1,13 @@
 module ImportService
   class Star < Base
     def rows
-      resources = JSON.parse(File.read('db/json/stars.json'))
+      JSON.parse(
+        File.read('db/json/stars.json')
+      )
 
-      binding.break
+      # resources = JSON.parse(File.read('db/json/stars.json'))
+
+      # binding.break
 
       # seating_orders = on_sheet_stars.map(&:seating_order)
       # names = on_sheet_stars.map(&:name)
