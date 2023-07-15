@@ -69,7 +69,14 @@ module ImportService
         rows << [woven_star_foreign_key_id, woven_character, woven_yomi, woven_en]
       end
 
-      rows
+      # 複数作品に出ているキャラをまとめる
+      # 基準は [1] の要素である「キャラ名」になる
+      # group_by で key に row[1] 、 value に row を持つハッシュを作る
+      # そして map で value の最初の要素を取り出す（全ての value が等しいという前提）
+      # #first なのでその時点で uniq と同等になる
+      rows.group_by { |row| row[1] }.map do |_, row|
+        row.first
+      end
     end
   end
 end
