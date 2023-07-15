@@ -22,6 +22,7 @@ m_Character [label = <<table border="0" align="center" cellspacing="0.5" cellpad
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
   <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
 m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -161,9 +162,10 @@ m_Star [label = <<table border="0" align="center" cellspacing="0.5" cellpadding=
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
-  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
-  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
-  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
 }

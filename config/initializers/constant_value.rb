@@ -20,6 +20,9 @@ module Vault
           ),
           'ImportService::OnSheet::GssCharacter' => Rails.root.join(
             Rails.root.join('db/csv_on_sheet/gss_character/web_format_data.csv')
+          ),
+          'ImportService::OnSheet::Character' => Rails.root.join(
+            Rails.root.join('db/csv_on_sheet/characters/bases.csv')
           )
         }
       end
