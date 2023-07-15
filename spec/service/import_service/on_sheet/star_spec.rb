@@ -27,7 +27,7 @@ describe ImportService::OnSheet::Star do
         seating_order
         category
         name
-        name_kana
+        yomi
         name_en
       ]
     end
@@ -46,7 +46,7 @@ describe ImportService::OnSheet::Star do
         seating_order
         category
         name
-        name_kana
+        yomi
         name_en
       ]
     end
