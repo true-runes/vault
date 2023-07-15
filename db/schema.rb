@@ -10,23 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_15_182011) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
-    t.bigint "star_id", null: false, comment: "宿星"
+    t.integer "star_id", comment: "宿星"
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
     t.string "yomi", default: "", null: false, comment: "キャラ名の読み仮名"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["star_id"], name: "index_characters_on_star_id"
+  end
+
+  create_table "gss_character_to_product_titles", force: :cascade do |t|
+    t.bigint "gss_character_id", null: false, comment: "総選挙キャラ"
+    t.bigint "product_title_id", null: false, comment: "作品"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gss_character_id"], name: "index_gss_character_to_product_titles_on_gss_character_id"
+    t.index ["product_title_id"], name: "index_gss_character_to_product_titles_on_product_title_id"
   end
 
   create_table "gss_characters", force: :cascade do |t|
-    t.string "name", default: "", null: false, comment: "キャラ名（極ベース）"
-    t.string "sosenkyo_name", default: "", null: false, comment: "総選挙順位発表用キャラ名"
+    t.string "name", default: "", null: false, comment: "総選挙キャラ名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -139,6 +146,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
     t.index ["name_en"], name: "index_on_sheet_titles_on_name_en", unique: true
   end
 
+  create_table "product_titles", force: :cascade do |t|
+    t.string "name", comment: "作品名"
+    t.string "name_en", comment: "作品名（英語）"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stars", force: :cascade do |t|
     t.string "seating_order", null: false, comment: "108星の順番"
     t.string "name", null: false, comment: "108星の名前"
@@ -148,5 +162,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "characters", "stars"
+  add_foreign_key "gss_character_to_product_titles", "gss_characters"
+  add_foreign_key "gss_character_to_product_titles", "product_titles"
 end

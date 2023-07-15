@@ -18,10 +18,20 @@ module ImportService
 
         s2_star_name = on_sheet_character.star_attr
         s2_star_foreign_key_id = ::Star.find_by(name: s2_star_name).id
-        s2_character = on_sheet_character.s2
         s2_yomi = on_sheet_character.s2_yomi
         s2_en = on_sheet_character.s2_en
-        rows << [s2_star_foreign_key_id, s2_character, s2_yomi, s2_en]
+        # 幻水II は一つの宿星に複数のキャラが属す場合がある
+        # その場合はシートにカンマ区切りで書いている
+        on_sheet_s2_characters = on_sheet_character.s2
+        s2_characters = if on_sheet_s2_characters.include?(',')
+                          on_sheet_s2_characters.split(',')
+                        else
+                          [on_sheet_s2_characters]
+                        end
+
+        s2_characters.each do |s2_character|
+          rows << [s2_star_foreign_key_id, s2_character, s2_yomi, s2_en]
+        end
 
         s3_star_name = on_sheet_character.star_attr
         s3_star_foreign_key_id = ::Star.find_by(name: s3_star_name).id

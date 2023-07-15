@@ -13,6 +13,10 @@ namespace :db do
         ImportService::Character.new.execute
         puts "[#{Time.zone.now}] ImportService::Character の実行が終了しました。"
 
+        puts "[#{Time.zone.now}] ImportService::ProductTitle の実行を開始します。"
+        ImportService::ProductTitle.new.execute
+        puts "[#{Time.zone.now}] ImportService::ProductTitle の実行が終了しました。"
+
         puts "[#{Time.zone.now}] ImportService::Gss::Character の実行を開始します。"
         ImportService::Gss::Character.new.execute
         puts "[#{Time.zone.now}] ImportService::Gss::Character の実行が終了しました。"
