@@ -13,6 +13,7 @@ namespace :db do
       end
 
       # 以下、CSVをもとにして本データベースを作成していく
+      ImportService::Character.new.execute
       ImportService::Gss::Character.new.execute
 
       output_erd if Rails.env.development?
