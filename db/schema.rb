@@ -14,21 +14,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "character_to_stars", force: :cascade do |t|
-    t.bigint "character_id", null: false, comment: "キャラクター"
-    t.bigint "star_id", null: false, comment: "108星"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["character_id"], name: "index_character_to_stars_on_character_id"
-    t.index ["star_id"], name: "index_character_to_stars_on_star_id"
-  end
-
   create_table "characters", force: :cascade do |t|
+    t.bigint "star_id", null: false, comment: "宿星"
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
     t.string "yomi", default: "", null: false, comment: "キャラ名の読み仮名"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["star_id"], name: "index_characters_on_star_id"
   end
 
   create_table "gss_characters", force: :cascade do |t|
@@ -130,7 +123,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
     t.string "seating_order", comment: "108星の順番"
     t.integer "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
     t.string "name", comment: "108星の名前"
-    t.string "name_kana", comment: "108星の名前（読み仮名）"
+    t.string "yomi", comment: "108星の名前（読み仮名）"
     t.string "name_en", comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -155,6 +148,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "character_to_stars", "characters"
-  add_foreign_key "character_to_stars", "stars"
+  add_foreign_key "characters", "stars"
 end
