@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/BlockLength
 module ImportService
   module Gss
     class CharacterToProductTitle < Base
@@ -96,3 +97,4 @@ module ImportService
     end
   end
 end
+# rubocop:enable Metrics/MethodLength, Metrics/AbcSize, Metrics/BlockLength
