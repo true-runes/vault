@@ -1,19 +1,22 @@
 namespace :db do
   namespace :importer do
-    desc 'インポータ（データソースのインポートはスコープ外）'
+    desc 'インポータ（OnSheet のデータを元に本テーブルへインポートする）'
     task execute: :environment do
       ActiveRecord::Base.transaction do
-        show_message_and_execute_on_importer('Character')
-        show_message_and_execute_on_importer('Star')
+        # 順番に意味はある
+
+        puts "[#{Time.zone.now}] ImportService::Star の実行を開始します。"
+        ImportService::Star.new.execute
+        puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
+
+        puts "[#{Time.zone.now}] ImportService::Character の実行を開始します。"
+        ImportService::Character.new.execute
+        puts "[#{Time.zone.now}] ImportService::Character の実行が終了しました。"
+
+        puts "[#{Time.zone.now}] ImportService::Gss::Character の実行を開始します。"
+        ImportService::Gss::Character.new.execute
+        puts "[#{Time.zone.now}] ImportService::Gss::Character の実行が終了しました。"
       end
     end
   end
-end
-
-def show_message_and_execute_on_importer(class_name_string)
-  puts "[#{Time.zone.now}] #{class_name_string} の実行を開始します。"
-
-  `bundle exec rails runner "ImportService::#{class_name_string}.new.execute"`
-
-  puts "[#{Time.zone.now}] #{class_name_string} の実行が終了しました。"
 end

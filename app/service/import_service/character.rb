@@ -1,45 +1,63 @@
 module ImportService
   class Character < Base
+    NUMBER_OF_SOD = 108
+
     def rows # rubocop:disable Metrics/AbcSize
       rows = []
 
-      # 時間が掛かるが順番を優先する
-      on_sheet_characters = ::OnSheet::Character.all
+      NUMBER_OF_SOD.times do |i|
+        index_number = i + 1
+        on_sheet_character = ::OnSheet::Character.find_by(id: index_number)
 
-      on_sheet_s1_characters = on_sheet_characters.pluck(:s1)
-      on_sheet_s1_yomis = on_sheet_characters.pluck(:s1_yomi)
-      on_sheet_s1_ens = on_sheet_characters.pluck(:s1_en)
-      rows += on_sheet_s1_characters.zip(on_sheet_s1_yomis, on_sheet_s1_ens)
+        s1_star_name = on_sheet_character.star_attr
+        s1_star_foreign_key_id = ::Star.find_by(name: s1_star_name).id
+        s1_character = on_sheet_character.s1
+        s1_yomi = on_sheet_character.s1_yomi
+        s1_en = on_sheet_character.s1_en
+        rows << [s1_star_foreign_key_id, s1_character, s1_yomi, s1_en]
 
-      on_sheet_s2_characters = on_sheet_characters.pluck(:s2)
-      on_sheet_s2_yomis = on_sheet_characters.pluck(:s2_yomi)
-      on_sheet_s2_ens = on_sheet_characters.pluck(:s2_en)
-      rows += on_sheet_s2_characters.zip(on_sheet_s2_yomis, on_sheet_s2_ens)
+        s2_star_name = on_sheet_character.star_attr
+        s2_star_foreign_key_id = ::Star.find_by(name: s2_star_name).id
+        s2_character = on_sheet_character.s2
+        s2_yomi = on_sheet_character.s2_yomi
+        s2_en = on_sheet_character.s2_en
+        rows << [s2_star_foreign_key_id, s2_character, s2_yomi, s2_en]
 
-      on_sheet_s3_characters = on_sheet_characters.pluck(:s3)
-      on_sheet_s3_yomis = on_sheet_characters.pluck(:s3_yomi)
-      on_sheet_s3_ens = on_sheet_characters.pluck(:s3_en)
-      rows += on_sheet_s3_characters.zip(on_sheet_s3_yomis, on_sheet_s3_ens)
+        s3_star_name = on_sheet_character.star_attr
+        s3_star_foreign_key_id = ::Star.find_by(name: s3_star_name).id
+        s3_character = on_sheet_character.s3
+        s3_yomi = on_sheet_character.s3_yomi
+        s3_en = on_sheet_character.s3_en
+        rows << [s3_star_foreign_key_id, s3_character, s3_yomi, s3_en]
 
-      on_sheet_s4_characters = on_sheet_characters.pluck(:s4)
-      on_sheet_s4_yomis = on_sheet_characters.pluck(:s4_yomi)
-      on_sheet_s4_ens = on_sheet_characters.pluck(:s4_en)
-      rows += on_sheet_s4_characters.zip(on_sheet_s4_yomis, on_sheet_s4_ens)
+        s4_star_name = on_sheet_character.star_attr
+        s4_star_foreign_key_id = ::Star.find_by(name: s4_star_name).id
+        s4_character = on_sheet_character.s4
+        s4_yomi = on_sheet_character.s4_yomi
+        s4_en = on_sheet_character.s4_en
+        rows << [s4_star_foreign_key_id, s4_character, s4_yomi, s4_en]
 
-      on_sheet_s5_characters = on_sheet_characters.pluck(:s5)
-      on_sheet_s5_yomis = on_sheet_characters.pluck(:s5_yomi)
-      on_sheet_s5_ens = on_sheet_characters.pluck(:s5_en)
-      rows += on_sheet_s5_characters.zip(on_sheet_s5_yomis, on_sheet_s5_ens)
+        s5_star_name = on_sheet_character.star_attr
+        s5_star_foreign_key_id = ::Star.find_by(name: s5_star_name).id
+        s5_character = on_sheet_character.s5
+        s5_yomi = on_sheet_character.s5_yomi
+        s5_en = on_sheet_character.s5_en
+        rows << [s5_star_foreign_key_id, s5_character, s5_yomi, s5_en]
 
-      on_sheet_tk_characters = on_sheet_characters.pluck(:tk)
-      on_sheet_tk_yomis = on_sheet_characters.pluck(:tk_yomi)
-      on_sheet_tk_ens = on_sheet_characters.pluck(:tk_en)
-      rows += on_sheet_tk_characters.zip(on_sheet_tk_yomis, on_sheet_tk_ens)
+        tk_star_name = on_sheet_character.star_attr
+        tk_star_foreign_key_id = ::Star.find_by(name: tk_star_name).id
+        tk_character = on_sheet_character.tk
+        tk_yomi = on_sheet_character.tk_yomi
+        tk_en = on_sheet_character.tk_en
+        rows << [tk_star_foreign_key_id, tk_character, tk_yomi, tk_en]
 
-      on_sheet_woven_characters = on_sheet_characters.pluck(:woven)
-      on_sheet_woven_yomis = on_sheet_characters.pluck(:woven_yomi)
-      on_sheet_woven_ens = on_sheet_characters.pluck(:woven_en)
-      rows += on_sheet_woven_characters.zip(on_sheet_woven_yomis, on_sheet_woven_ens)
+        woven_star_name = on_sheet_character.star_attr
+        woven_star_foreign_key_id = ::Star.find_by(name: woven_star_name).id
+        woven_character = on_sheet_character.woven
+        woven_yomi = on_sheet_character.woven_yomi
+        woven_en = on_sheet_character.woven_en
+        rows << [woven_star_foreign_key_id, woven_character, woven_yomi, woven_en]
+      end
 
       rows
     end

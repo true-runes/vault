@@ -1,4 +1,4 @@
-id,seating_order,category,name,name_kana,name_en
+id,seating_order,category,name,yomi,name_en
 1,1,0,天魁星,てんかいせい,Leader Star
 2,2,0,天罡星,てんこうせい,Strength Star
 3,3,0,天機星,てんきせい,Knowledge Star
