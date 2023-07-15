@@ -15,6 +15,8 @@ $ bundle exec rails db:download_csv:execute
 
 #### 3. 「2.」で得られたCSV をデータソースとするインポートタスクを実行する
 - 実際の中身は `app/service` 配下のクラスである
+- インポートされるファイルは明示的に記述する必要がある
+  - `config/initializers/constant_value.rb`
 - インポートが正常に完了すると `db` 配下に ER図 が生成される
 
 ```bash
