@@ -1,3 +1,3 @@
 class Character < ApplicationRecord
-  belongs_to :star
+  belongs_to :star, optional: true
 end

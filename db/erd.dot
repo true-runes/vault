@@ -22,7 +22,7 @@ m_Character [label = <<table border="0" align="center" cellspacing="0.5" cellpad
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
   <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="star_id">star_id <font face="Arial Italic" color="grey60">integer (8) ∗ FK</font></td></tr>
+  <tr><td align="left" width="130" port="star_id">star_id <font face="Arial Italic" color="grey60">integer FK</font></td></tr>
   <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
@@ -33,7 +33,16 @@ m_Character [label = <<table border="0" align="center" cellspacing="0.5" cellpad
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
-  <tr><td align="left" width="130" port="sosenkyo_name">sosenkyo_name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+m_GssCharacterToTitle [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">GssCharacterToTitle</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="gss_character_id">gss_character_id <font face="Arial Italic" color="grey60">integer (8) ∗ FK</font></td></tr>
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="product_title_id">product_title_id <font face="Arial Italic" color="grey60">integer (8) ∗ FK</font></td></tr>
 </table>
 >];
 "m_OnSheet::Character" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -160,6 +169,16 @@ m_Character [label = <<table border="0" align="center" cellspacing="0.5" cellpad
   <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
+m_ProductTitle [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">ProductTitle</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
+</table>
+>];
 m_Star [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
   <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Star</font></td></tr>
 </table>
@@ -172,5 +191,8 @@ m_Star [label = <<table border="0" align="center" cellspacing="0.5" cellpadding=
   <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
 </table>
 >];
-  m_Star -> m_Character [arrowsize = "0.6", arrowhead = "dotnormal", arrowtail = "odot", weight = "2"];
+  "m_Gss::Character" -> m_GssCharacterToTitle [arrowsize = "0.6", arrowhead = "dotnormal", arrowtail = "odot", weight = "2"];
+  "m_Gss::Character" -> m_ProductTitle [style = "dotted", arrowsize = "0.6", arrowhead = "odotnormal", arrowtail = "odot", weight = "1", constraint = "false"];
+  m_Star -> m_Character [arrowsize = "0.6", arrowhead = "odotnormal", arrowtail = "odot", weight = "2"];
+  m_ProductTitle -> m_GssCharacterToTitle [arrowsize = "0.6", arrowhead = "dotnormal", arrowtail = "odot", weight = "1"];
 }
