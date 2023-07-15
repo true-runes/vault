@@ -22,7 +22,7 @@ describe DownloadCsvService do
 
         expect(
           File.open('tmp/vault_test_check_first_row.csv').readline.chomp
-        ).to eq 'id,seating_order,category,name,name_kana,name_en'
+        ).to eq 'id,seating_order,category,name,yomi,name_en'
       end
 
       it '二行目（内容の行の一行目）の内容が期待どおりであること' do
