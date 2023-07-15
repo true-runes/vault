@@ -1,5 +1,5 @@
 module Gss
   def self.table_name_prefix
-    "gss_"
+    'gss_'
   end
 end
