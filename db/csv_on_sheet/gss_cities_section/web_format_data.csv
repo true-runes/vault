@@ -1,4 +1,4 @@
-id,product_name,country_name,city_name,is_available,is_town_or_village_or_city,is_dungeon,is_architecture,is_others,memo
+id,product_name,country_name,city_name,is_available,is_town_or_village_or_city,is_dungeon,is_architecture,is_others,memo,city_yomi,display_order
 1,幻水I,赤月帝国,アールス地方,FALSE,FALSE,FALSE,FALSE,TRUE
 2,幻水I,赤月帝国,アールスの地,FALSE,FALSE,FALSE,FALSE,TRUE
 3,幻水I,赤月帝国,赤月帝国,FALSE,FALSE,FALSE,FALSE,TRUE

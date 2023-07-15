@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_15_020215) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +27,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
     t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
     t.string "yomi", default: "", null: false, comment: "キャラ名の読み仮名"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gss_characters", force: :cascade do |t|
+    t.string "name", default: "", null: false, comment: "キャラ名（極ベース）"
+    t.string "sosenkyo_name", default: "", null: false, comment: "総選挙順位発表用キャラ名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
   end
 
   create_table "on_sheet_gss_characters", force: :cascade do |t|
-    t.string "gensosenkyo_name", comment: "総選挙での名前"
+    t.string "sosenkyo_name", comment: "総選挙での名前"
     t.string "name", null: false, comment: "名前"
     t.boolean "has_nickname", comment: "別名を持つかどうか"
     t.boolean "exists_gs1", null: false, comment: "幻水Iに登場するかどうか"
@@ -85,6 +92,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
     t.string "product_name", comment: "タイトル名"
     t.string "country_name", comment: "国名"
     t.string "city_name", comment: "都市名"
+    t.string "city_yomi", comment: "都市名の読み"
+    t.integer "display_order", comment: "表示順"
     t.boolean "is_available", comment: "利用可能かどうか"
     t.boolean "is_town_or_village_or_city", comment: "町か村か都市か"
     t.boolean "is_dungeon", comment: "ダンジョンかどうか"
@@ -101,6 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_125613) do
     t.string "character_name", comment: "キャラクター名"
     t.string "facility_or_position_name", comment: "施設名・役職名"
     t.string "role_of_hq_on_system", comment: "本拠地での役割（システム面）"
+    t.integer "display_order", null: false, comment: "表示順"
     t.string "note", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
