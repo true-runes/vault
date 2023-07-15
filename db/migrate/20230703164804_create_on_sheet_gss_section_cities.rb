@@ -4,6 +4,8 @@ class CreateOnSheetGssSectionCities < ActiveRecord::Migration[7.0]
       t.string :product_name, null: true, comment: 'タイトル名'
       t.string :country_name, null: true, comment: '国名'
       t.string :city_name, null: true, comment: '都市名'
+      t.string :city_yomi, null: true, comment: '都市名の読み'
+      t.integer :display_order, null: true, comment: '表示順'
 
       t.boolean :is_available, null: true, comment: '利用可能かどうか'
       t.boolean :is_town_or_village_or_city, null: true, comment: '町か村か都市か'

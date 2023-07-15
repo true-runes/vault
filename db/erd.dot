@@ -35,6 +35,16 @@ m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" c
   <tr><td align="left" width="130" port="star_id">star_id <font face="Arial Italic" color="grey60">integer (8) ∗</font></td></tr>
 </table>
 >];
+"m_Gss::Character" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Gss::Character</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
+  <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="sosenkyo_name">sosenkyo_name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
 "m_OnSheet::Character" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
   <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OnSheet::Character</font></td></tr>
 </table>
@@ -84,11 +94,11 @@ m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" c
   <tr><td align="left" width="130" port="exists_rhapsodia">exists_rhapsodia <font face="Arial Italic" color="grey60">boolean ∗</font></td></tr>
   <tr><td align="left" width="130" port="exists_tk">exists_tk <font face="Arial Italic" color="grey60">boolean ∗</font></td></tr>
   <tr><td align="left" width="130" port="exists_tsumutoki">exists_tsumutoki <font face="Arial Italic" color="grey60">boolean ∗</font></td></tr>
-  <tr><td align="left" width="130" port="gensosenkyo_name">gensosenkyo_name <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="has_nickname">has_nickname <font face="Arial Italic" color="grey60">boolean</font></td></tr>
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="memo">memo <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="sosenkyo_name">sosenkyo_name <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 "m_OnSheet::GssSectionCity" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -97,7 +107,9 @@ m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" c
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="city_name">city_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="city_yomi">city_yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="country_name">country_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="display_order">display_order <font face="Arial Italic" color="grey60">integer</font></td></tr>
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="is_architecture">is_architecture <font face="Arial Italic" color="grey60">boolean</font></td></tr>
   <tr><td align="left" width="130" port="is_available">is_available <font face="Arial Italic" color="grey60">boolean</font></td></tr>
@@ -114,6 +126,7 @@ m_CharacterToStar [label = <<table border="0" align="center" cellspacing="0.5" c
 |
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="character_name">character_name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="display_order">display_order <font face="Arial Italic" color="grey60">integer ∗</font></td></tr>
   <tr><td align="left" width="130" port="facility_or_position_name">facility_or_position_name <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="is_available">is_available <font face="Arial Italic" color="grey60">boolean</font></td></tr>

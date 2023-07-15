@@ -1,7 +1,7 @@
 class CreateOnSheetGssCharacters < ActiveRecord::Migration[7.0]
   def change
     create_table :on_sheet_gss_characters do |t|
-      t.string :gensosenkyo_name, null: true, comment: '総選挙での名前'
+      t.string :sosenkyo_name, null: true, comment: '総選挙での名前'
       t.string :name, null: false, comment: '名前'
 
       t.boolean :has_nickname, null: true, comment: '別名を持つかどうか'
