@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/AbcSize
 class CreateOnSheetCharacters < ActiveRecord::Migration[7.0]
   def change
     create_table :on_sheet_characters do |t|
@@ -47,3 +48,4 @@ class CreateOnSheetCharacters < ActiveRecord::Migration[7.0]
     end
   end
 end
+# rubocop:enable Metrics/AbcSize
