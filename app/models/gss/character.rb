@@ -8,5 +8,13 @@ module Gss
              through: :gss_character_to_product_titles,
              class_name: 'ProductTitle',
              foreign_key: :product_title_id
+
+    has_many :gss_character_to_nicknames,
+             class_name: 'GssCharacterToNickname',
+             foreign_key: :gss_character_id
+    has_many :nicknames,
+             through: :gss_character_to_nicknames,
+             class_name: 'Nickname',
+             foreign_key: :nickname_id
   end
 end
