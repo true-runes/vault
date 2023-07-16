@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, { format: 'json' } do
     namespace :v1 do
       resources :stars, only: [:index]
+      resources :nicknames, only: %i[index show], param: :name
     end
   end
 end
