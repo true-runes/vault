@@ -8,7 +8,6 @@ module ImportService
 
       def execute
         ActiveRecord::Base.transaction do
-          binding.irb
           @klass.import!(
             @headers,
             @rows,

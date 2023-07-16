@@ -1,5 +1,5 @@
 module Gss
-  # NOTE: ここで foreign_key を指定しないと SQL が適切に構成されない ()
+  # NOTE: ここで foreign_key を指定しないと SQL が適切に構成されない
   class Character < ApplicationRecord
     has_many :gss_character_to_product_titles,
              class_name: 'Gss::CharacterToProductTitle',
