@@ -1,2 +1,4 @@
-class OnSheet::Nickname < ApplicationRecord
+module OnSheet
+  class Nickname < ApplicationRecord
+  end
 end

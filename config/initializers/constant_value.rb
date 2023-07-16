@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/AbcSize
 module Vault
   class ConstantValue
     class << self
@@ -32,3 +33,4 @@ module Vault
     end
   end
 end
+# rubocop:enable Metrics/AbcSize
