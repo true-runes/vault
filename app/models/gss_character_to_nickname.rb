@@ -1,0 +1,2 @@
+class GssCharacterToNickname < ApplicationRecord
+end
