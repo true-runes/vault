@@ -8,6 +8,7 @@ module ImportService
 
       nicknames = nickname_records.map do |nickname_record|
         [
+          nickname_record.nickname_00,
           nickname_record.nickname_01,
           nickname_record.nickname_02,
           nickname_record.nickname_03,
@@ -21,7 +22,7 @@ module ImportService
           nickname_record.nickname_11,
           nickname_record.nickname_12,
           nickname_record.nickname_13,
-        ].compact_blank
+        ].uniq.compact_blank
       end.flatten
 
       nicknames.uniq.map do |nickname|

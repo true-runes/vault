@@ -13,6 +13,7 @@ module ImportService
         gss_character_id = ::Gss::Character.find_by(name: gss_character_name).id
 
         nicknames = [
+          nickname_record.nickname_00,
           nickname_record.nickname_01,
           nickname_record.nickname_02,
           nickname_record.nickname_03,
@@ -26,11 +27,11 @@ module ImportService
           nickname_record.nickname_11,
           nickname_record.nickname_12,
           nickname_record.nickname_13,
-        ].compact_blank
+        ].uniq.compact_blank
 
+        # nickname と gss_character_name が同じでも OK とする
+        # nickname は「呼び名」の意なので
         nicknames.each do |nickname|
-          next if nickname == gss_character_name
-
           nickname_id = ::Nickname.find_by(name: nickname).id
 
           rows << [
