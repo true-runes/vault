@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_16_070412) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_070412) do
     t.index ["character_string_id"], name: "index_characters_on_character_string_id"
   end
 
+  create_table "gss_character_to_nicknames", force: :cascade do |t|
+    t.bigint "gss_character_id", null: false, comment: "総選挙キャラ"
+    t.bigint "nickname_id", null: false, comment: "ニックネーム"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gss_character_id"], name: "index_gss_character_to_nicknames_on_gss_character_id"
+    t.index ["nickname_id"], name: "index_gss_character_to_nicknames_on_nickname_id"
+  end
+
   create_table "gss_character_to_product_titles", force: :cascade do |t|
     t.bigint "gss_character_id", null: false, comment: "総選挙キャラ"
     t.bigint "product_title_id", null: false, comment: "作品"
@@ -43,6 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_070412) do
 
   create_table "gss_characters", force: :cascade do |t|
     t.string "name", default: "", null: false, comment: "総選挙キャラ名"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nicknames", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -132,6 +147,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_070412) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "on_sheet_nicknames", force: :cascade do |t|
+    t.string "name", comment: "ニックネーム"
+    t.string "nickname_01", comment: "ニックネーム01"
+    t.string "nickname_02", comment: "ニックネーム02"
+    t.string "nickname_03", comment: "ニックネーム03"
+    t.string "nickname_04", comment: "ニックネーム04"
+    t.string "nickname_05", comment: "ニックネーム05"
+    t.string "nickname_06", comment: "ニックネーム06"
+    t.string "nickname_07", comment: "ニックネーム07"
+    t.string "nickname_08", comment: "ニックネーム08"
+    t.string "nickname_09", comment: "ニックネーム09"
+    t.string "nickname_10", comment: "ニックネーム10"
+    t.string "nickname_11", comment: "ニックネーム11"
+    t.string "nickname_12", comment: "ニックネーム12"
+    t.string "nickname_13", comment: "ニックネーム13"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "on_sheet_platforms", force: :cascade do |t|
     t.string "name", comment: "ゲーム機の機種名"
     t.string "name_en", comment: "ゲーム機の機種名（英語）"
@@ -178,6 +212,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_070412) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "gss_character_to_nicknames", "gss_characters"
+  add_foreign_key "gss_character_to_nicknames", "nicknames"
   add_foreign_key "gss_character_to_product_titles", "gss_characters"
   add_foreign_key "gss_character_to_product_titles", "product_titles"
 end

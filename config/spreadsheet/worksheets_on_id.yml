@@ -20,6 +20,7 @@ characters:
   id: ENV.fetch('SPREADSHEET_ID_CHARACTERS')
   worksheet_names:
     - bases
+    - nicknames
 
 gss_hq_characters_section:
   id: ENV.fetch('SPREADSHEET_ID_GSS_HQ_CHARACTERS_SECTION')
@@ -35,3 +36,4 @@ gss_character:
   id: ENV.fetch('SPREADSHEET_ID_GSS_CHARACTER')
   worksheet_names:
     - web_format_data
+    - DB_nicknames
