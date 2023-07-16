@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe OnSheet::GssCharacter, type: :model do
   describe 'OnSheet::GssCharacter クラス' do
+    it '"ゴードン" 以外はすべてユニークなキャラであること' do
+      expect(OnSheet::GssCharacter.all.size).to eq OnSheet::GssCharacter.all.map(&:name).uniq.size + 1
+    end
+
     it '"ゴードン" が 2人 いること' do
       characters = OnSheet::GssCharacter.where(name: 'ゴードン')
 

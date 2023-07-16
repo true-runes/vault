@@ -1,6 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Character, type: :model do
+  describe '特定キャラ' do
+    it '#name に "ゴードン" というキャラは存在しないこと' do
+      expect(Character.where(name: 'ゴードン')).to be_blank
+    end
+
+    it '#name に "ゴードン（幻想水滸伝II）" というキャラが存在すること' do
+      expect(Character.where(name: 'ゴードン（幻想水滸伝II）')).to be_present
+    end
+
+    it '#name に "ゴードン（幻想水滸伝III）" というキャラが存在すること' do
+      expect(Character.where(name: 'ゴードン（幻想水滸伝III）')).to be_present
+    end
+  end
+
   describe 'ルック' do
     let(:luc_records) { Character.where(name: 'ルック') }
 
