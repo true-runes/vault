@@ -9,6 +9,10 @@ namespace :db do
         ImportService::Star.new.execute
         puts "[#{Time.zone.now}] ImportService::Star の実行が終了しました。"
 
+        puts "[#{Time.zone.now}] ImportService::CharacterString の実行を開始します。"
+        ImportService::CharacterString.new.execute
+        puts "[#{Time.zone.now}] ImportService::CharacterString の実行が終了しました。"
+
         puts "[#{Time.zone.now}] ImportService::Character の実行を開始します。"
         ImportService::Character.new.execute
         puts "[#{Time.zone.now}] ImportService::Character の実行が終了しました。"

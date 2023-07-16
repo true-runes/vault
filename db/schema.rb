@@ -14,13 +14,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_182011) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "character_strings", force: :cascade do |t|
+    t.string "name", default: "", null: false, comment: "キャラ名（「極」に準じ、記述上同一ならば同一とする）"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_character_strings_on_name", unique: true
+  end
+
   create_table "characters", force: :cascade do |t|
+    t.bigint "character_string_id", null: false, comment: "ユニークキャラ名テーブルへの外部キー"
     t.integer "star_id", comment: "宿星"
-    t.string "name", default: "", null: false, comment: "キャラ名（「極」に準ずる）"
+    t.string "name", default: "", null: false, comment: "キャラ名（「極」に準じ、意味が異なる同名キャラは区別する）"
     t.string "yomi", default: "", null: false, comment: "キャラ名の読み仮名"
     t.string "name_en", default: "", null: false, comment: "キャラ名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["character_string_id"], name: "index_characters_on_character_string_id"
   end
 
   create_table "gss_character_to_product_titles", force: :cascade do |t|
@@ -41,28 +50,35 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_15_182011) do
   create_table "on_sheet_characters", force: :cascade do |t|
     t.string "star_attr", comment: "108星の名前"
     t.string "s1", comment: "幻水Iでの名前"
+    t.string "s1_str", comment: "幻水Iでの名前の単純な文字列"
     t.string "s1_yomi", comment: "幻水Iでの名前の読み仮名"
     t.string "s1_en", comment: "幻水Iでの名前（英語）"
     t.string "s2", comment: "幻水IIでの名前"
+    t.string "s2_str", comment: "幻水IIでの名前の単純な文字列"
     t.string "s2_yomi", comment: "幻水IIでの名前の読み仮名"
     t.string "s2_en", comment: "幻水IIでの名前（英語）"
     t.string "s3", comment: "幻水IIIでの名前"
+    t.string "s3_str", comment: "幻水IIIでの名前の単純な文字列"
     t.string "s3_yomi", comment: "幻水IIIでの名前の読み仮名"
     t.string "s3_en", comment: "幻水IIIでの名前（英語）"
     t.string "s4", comment: "幻水IVでの名前"
+    t.string "s4_str", comment: "幻水IVでの名前の単純な文字列"
     t.string "s4_yomi", comment: "幻水IVでの名前の読み仮名"
     t.string "s4_en", comment: "幻水IVでの名前（英語）"
     t.string "s5", comment: "幻水Vでの名前"
+    t.string "s5_str", comment: "幻水Vでの名前の単純な文字列"
     t.string "s5_yomi", comment: "幻水Vでの名前の読み仮名"
     t.string "s5_en", comment: "幻水Vでの名前（英語）"
     t.string "tk", comment: "TKでの名前"
+    t.string "tk_str", comment: "TKでの名前の単純な文字列"
     t.string "tk_yomi", comment: "TKでの名前の読み仮名"
     t.string "tk_en", comment: "TKでの名前（英語）"
     t.string "woven", comment: "紡時での名前"
+    t.string "woven_str", comment: "紡時での名前の単純な文字列"
     t.string "woven_yomi", comment: "紡時での名前の読み仮名"
     t.string "woven_en", comment: "紡時での名前（英語）"
     t.string "water_margin", comment: "水滸伝での名前"
-    t.string "water_margin_yomi", comment: "紡時での名前の読み仮名"
+    t.string "water_margin_yomi", comment: "水滸伝での名前の読み仮名"
     t.string "water_margin_en", comment: "水滸伝での名前（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

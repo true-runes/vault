@@ -2,7 +2,8 @@ module SpreadsheetService
   class WorksheetManager
     attr_reader :worksheet, :headers, :rows
 
-    def initialize(sheets_api, spreadsheet, worksheet_name, range: 'A1:Z')
+    # TODO: range が A1:Z では足りない自体が発生したので、工夫すること
+    def initialize(sheets_api, spreadsheet, worksheet_name, range: 'A1:AK')
       @sheets_api = sheets_api
       @spreadsheet = spreadsheet
 
@@ -17,7 +18,7 @@ module SpreadsheetService
       raise "Some cells are invalid in #{@worksheet.properties.title}" unless valid_all_cells?
     end
 
-    def all_cells(worksheet, range: 'A1:Z')
+    def all_cells(worksheet, range:)
       # 戻り値からは nil が取り除かれる
       @sheets_api.get_spreadsheet_values(
         @spreadsheet.spreadsheet_id,

@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Gss::Character, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'キャラ数' do
+    it 'すべてユニークなキャラであること' do
+      expect(Gss::Character.all.count).to eq Gss::Character.all.distinct.count
+    end
+  end
 end
