@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe GssCharacterToProductTitle, type: :model do
+RSpec.describe Gss::CharacterToProductTitle, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
