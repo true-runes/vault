@@ -23,6 +23,9 @@ module Vault
           ),
           'ImportService::OnSheet::Character' => Rails.root.join(
             Rails.root.join('db/csv_on_sheet/characters/bases.csv')
+          ),
+          'ImportService::OnSheet::Nickname' => Rails.root.join(
+            Rails.root.join('db/csv_on_sheet/characters/nicknames.csv')
           )
         }
       end

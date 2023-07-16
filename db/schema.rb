@@ -147,6 +147,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "on_sheet_nicknames", force: :cascade do |t|
+    t.string "name", comment: "ニックネーム"
+    t.string "nickname_01", comment: "ニックネーム01"
+    t.string "nickname_02", comment: "ニックネーム02"
+    t.string "nickname_03", comment: "ニックネーム03"
+    t.string "nickname_04", comment: "ニックネーム04"
+    t.string "nickname_05", comment: "ニックネーム05"
+    t.string "nickname_06", comment: "ニックネーム06"
+    t.string "nickname_07", comment: "ニックネーム07"
+    t.string "nickname_08", comment: "ニックネーム08"
+    t.string "nickname_09", comment: "ニックネーム09"
+    t.string "nickname_10", comment: "ニックネーム10"
+    t.string "nickname_11", comment: "ニックネーム11"
+    t.string "nickname_12", comment: "ニックネーム12"
+    t.string "nickname_13", comment: "ニックネーム13"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "on_sheet_platforms", force: :cascade do |t|
     t.string "name", comment: "ゲーム機の機種名"
     t.string "name_en", comment: "ゲーム機の機種名（英語）"

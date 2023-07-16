@@ -11,6 +11,7 @@ module FetchDataTableService
         @worksheet_manager = worksheet_manager(sheets_api, spreadsheet, worksheet_name)
       rescue StandardError => e
         puts "#{Time.zone.now} [LOG] エラー: ワークシートの読み込みに失敗しました。"
+        puts '※このエラーは Rate Limits の際にも出ることがあります'
         puts "ワークシート名: #{worksheet_name}"
         puts e.message
         puts
@@ -21,6 +22,7 @@ module FetchDataTableService
       @worksheet_manager.headers
     rescue StandardError
       puts "#{Time.zone.now} [LOG] エラー: ワークシートの読み込みに失敗しました。"
+      puts '※このエラーは Rate Limits の際にも出ることがあります'
       puts "ワークシート名: #{worksheet_name}"
       puts e.message
       puts

@@ -28,6 +28,14 @@ namespace :db do
         puts "[#{Time.zone.now}] ImportService::Gss::CharacterToProductTitle の実行を開始します。"
         ImportService::Gss::CharacterToProductTitle.new.execute
         puts "[#{Time.zone.now}] ImportService::Gss::CharacterToProductTitle の実行が終了しました。"
+
+        puts "[#{Time.zone.now}] ImportService::Nickname の実行を開始します。"
+        ImportService::Nickname.new.execute
+        puts "[#{Time.zone.now}] ImportService::Nickname の実行が終了しました。"
+
+        puts "[#{Time.zone.now}] ImportService::GssCharacterToNickname の実行を開始します。"
+        ImportService::GssCharacterToNickname.new.execute
+        puts "[#{Time.zone.now}] ImportService::GssCharacterToNickname の実行が終了しました。"
       end
     end
   end
