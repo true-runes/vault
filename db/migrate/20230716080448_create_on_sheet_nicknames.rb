@@ -2,6 +2,7 @@ class CreateOnSheetNicknames < ActiveRecord::Migration[7.0]
   def change
     create_table :on_sheet_nicknames do |t|
       t.string :name, null: true, comment: 'ニックネーム'
+      t.string :nickname_00, null: true, comment: 'ニックネーム00（総選挙名と同一）'
       t.string :nickname_01, null: true, comment: 'ニックネーム01'
       t.string :nickname_02, null: true, comment: 'ニックネーム02'
       t.string :nickname_03, null: true, comment: 'ニックネーム03'

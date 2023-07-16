@@ -149,6 +149,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
 
   create_table "on_sheet_nicknames", force: :cascade do |t|
     t.string "name", comment: "ニックネーム"
+    t.string "nickname_00", comment: "ニックネーム00（総選挙名と同一）"
     t.string "nickname_01", comment: "ニックネーム01"
     t.string "nickname_02", comment: "ニックネーム02"
     t.string "nickname_03", comment: "ニックネーム03"

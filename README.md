@@ -1,6 +1,11 @@
 # Vault
 - Suikoden series' "Vault, Storage or Warehouse."
 
+# スプレッドシートを変更したら変えなければならないところ
+- db:migrate
+- OnSheet の Importer
+- データの Importer
+
 # インポートの手順
 
 #### 1. YAML を編集

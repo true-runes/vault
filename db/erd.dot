@@ -178,6 +178,7 @@ m_Nickname [label = <<table border="0" align="center" cellspacing="0.5" cellpadd
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname_00">nickname_00 <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="nickname_01">nickname_01 <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="nickname_02">nickname_02 <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="nickname_03">nickname_03 <font face="Arial Italic" color="grey60">string</font></td></tr>
