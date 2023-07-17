@@ -11,5 +11,11 @@ class CreateOnSheetGssSectionHqCharacters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    # タイトル名、キャラクター名、施設名・役職名 の 複合UNIQUE
+    add_index :on_sheet_gss_section_hq_characters,
+              %i[product_name character_name facility_or_position_name],
+              unique: true,
+              name: 'index_on_sheet_gss_section_hq_characters_on_multiple_attrs'
   end
 end

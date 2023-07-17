@@ -6,5 +6,8 @@ class CreateProductTitles < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :product_titles, :name, unique: true
+    add_index :product_titles, :name_en, unique: true
   end
 end

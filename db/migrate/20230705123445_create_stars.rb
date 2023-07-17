@@ -8,5 +8,9 @@ class CreateStars < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :stars, :seating_order, unique: true
+    add_index :stars, :name, unique: true
+    add_index :stars, :name_en, unique: true
   end
 end

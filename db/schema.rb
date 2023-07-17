@@ -30,6 +30,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["character_string_id"], name: "index_characters_on_character_string_id"
+    t.index ["name"], name: "index_characters_on_name", unique: true
+    t.index ["name_en"], name: "index_characters_on_name_en", unique: true
   end
 
   create_table "gss_character_to_nicknames", force: :cascade do |t|
@@ -54,12 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "name", default: "", null: false, comment: "総選挙キャラ名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_gss_characters_on_name", unique: true
   end
 
   create_table "nicknames", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_nicknames_on_name", unique: true
   end
 
   create_table "on_sheet_characters", force: :cascade do |t|
@@ -97,6 +101,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "water_margin_en", comment: "水滸伝での名前（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["s1"], name: "index_on_sheet_characters_on_s1", unique: true
+    t.index ["s1_str"], name: "index_on_sheet_characters_on_s1_str", unique: true
+    t.index ["s3"], name: "index_on_sheet_characters_on_s3", unique: true
+    t.index ["s3_str"], name: "index_on_sheet_characters_on_s3_str", unique: true
+    t.index ["s4"], name: "index_on_sheet_characters_on_s4", unique: true
+    t.index ["s4_str"], name: "index_on_sheet_characters_on_s4_str", unique: true
+    t.index ["s5"], name: "index_on_sheet_characters_on_s5", unique: true
+    t.index ["s5_str"], name: "index_on_sheet_characters_on_s5_str", unique: true
+    t.index ["star_attr"], name: "index_on_sheet_characters_on_star_attr", unique: true
+    t.index ["tk"], name: "index_on_sheet_characters_on_tk", unique: true
+    t.index ["tk_str"], name: "index_on_sheet_characters_on_tk_str", unique: true
+    t.index ["water_margin"], name: "index_on_sheet_characters_on_water_margin", unique: true
+    t.index ["woven"], name: "index_on_sheet_characters_on_woven", unique: true
+    t.index ["woven_str"], name: "index_on_sheet_characters_on_woven_str", unique: true
   end
 
   create_table "on_sheet_gss_characters", force: :cascade do |t|
@@ -117,6 +135,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "memo", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sosenkyo_name", "name"], name: "index_on_sheet_gss_characters_on_multiple_attrs", unique: true
   end
 
   create_table "on_sheet_gss_section_cities", force: :cascade do |t|
@@ -133,6 +152,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "memo", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_name", "country_name", "city_name"], name: "index_on_sheet_gss_section_cities_on_multiple_attrs", unique: true
   end
 
   create_table "on_sheet_gss_section_hq_characters", force: :cascade do |t|
@@ -145,10 +165,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "note", comment: "備考"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_name", "character_name", "facility_or_position_name"], name: "index_on_sheet_gss_section_hq_characters_on_multiple_attrs", unique: true
   end
 
   create_table "on_sheet_nicknames", force: :cascade do |t|
-    t.string "name", comment: "ニックネーム"
+    t.string "name", comment: "本名（ゴルドーは区別される）"
     t.string "nickname_00", comment: "ニックネーム00（総選挙名と同一）"
     t.string "nickname_01", comment: "ニックネーム01"
     t.string "nickname_02", comment: "ニックネーム02"
@@ -163,8 +184,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "nickname_11", comment: "ニックネーム11"
     t.string "nickname_12", comment: "ニックネーム12"
     t.string "nickname_13", comment: "ニックネーム13"
+    t.string "nickname_14", comment: "ニックネーム14"
+    t.string "nickname_15", comment: "ニックネーム15"
+    t.string "nickname_16", comment: "ニックネーム16"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_on_sheet_nicknames_on_name", unique: true
+    t.index ["nickname_00"], name: "index_on_sheet_nicknames_on_nickname_00", unique: true
   end
 
   create_table "on_sheet_platforms", force: :cascade do |t|
@@ -178,13 +204,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
   end
 
   create_table "on_sheet_stars", force: :cascade do |t|
-    t.string "seating_order", comment: "108星の順番"
+    t.integer "seating_order", comment: "108星の順番"
     t.integer "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
     t.string "name", comment: "108星の名前"
     t.string "yomi", comment: "108星の名前（読み仮名）"
     t.string "name_en", comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_on_sheet_stars_on_name"
+    t.index ["name_en"], name: "index_on_sheet_stars_on_name_en"
     t.index ["seating_order"], name: "index_on_sheet_stars_on_seating_order", unique: true
   end
 
@@ -202,6 +230,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "name_en", comment: "作品名（英語）"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_product_titles_on_name", unique: true
+    t.index ["name_en"], name: "index_product_titles_on_name_en", unique: true
   end
 
   create_table "stars", force: :cascade do |t|
@@ -211,6 +241,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "name_en", null: false, comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_stars_on_name", unique: true
+    t.index ["name_en"], name: "index_stars_on_name_en", unique: true
+    t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
   end
 
   add_foreign_key "gss_character_to_nicknames", "gss_characters"

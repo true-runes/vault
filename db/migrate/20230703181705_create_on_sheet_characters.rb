@@ -46,6 +46,24 @@ class CreateOnSheetCharacters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :on_sheet_characters, :star_attr, unique: true
+    add_index :on_sheet_characters, :s1, unique: true
+    add_index :on_sheet_characters, :s1_str, unique: true
+    # "アビズボア,フェザー,ジークフリード" などの重複例がある
+    # add_index :on_sheet_characters, :s2, unique: true
+    # add_index :on_sheet_characters, :s2_str, unique: true
+    add_index :on_sheet_characters, :s3, unique: true
+    add_index :on_sheet_characters, :s3_str, unique: true
+    add_index :on_sheet_characters, :s4, unique: true
+    add_index :on_sheet_characters, :s4_str, unique: true
+    add_index :on_sheet_characters, :s5, unique: true
+    add_index :on_sheet_characters, :s5_str, unique: true
+    add_index :on_sheet_characters, :tk, unique: true
+    add_index :on_sheet_characters, :tk_str, unique: true
+    add_index :on_sheet_characters, :woven, unique: true
+    add_index :on_sheet_characters, :woven_str, unique: true
+    add_index :on_sheet_characters, :water_margin, unique: true
   end
 end
 # rubocop:enable Metrics/AbcSize

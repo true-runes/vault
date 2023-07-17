@@ -5,5 +5,7 @@ class CreateGssCharacters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :gss_characters, :name, unique: true
   end
 end

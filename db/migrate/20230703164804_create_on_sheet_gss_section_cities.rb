@@ -17,5 +17,11 @@ class CreateOnSheetGssSectionCities < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    # タイトル、国名、都市名 の 複合UNIQUE
+    add_index :on_sheet_gss_section_cities,
+              %i[product_name country_name city_name],
+              unique: true,
+              name: 'index_on_sheet_gss_section_cities_on_multiple_attrs'
   end
 end

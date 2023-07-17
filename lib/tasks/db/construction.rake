@@ -1,4 +1,19 @@
 namespace :db do
+  namespace :update do
+    desc 'DB を壊さないでデータの更新を行う'
+    task execute: :environment do
+      class_name_to_csv_filepath_map = Vault::ConstantValue.class_name_to_csv_filepath_map
+
+      ActiveRecord::Base.transaction do
+        class_name_to_csv_filepath_map.each do |class_name_string, csv_filepath|
+          show_message_and_execute_on_construction(class_name_string, csv_filepath)
+        end
+      end
+
+      output_erd if Rails.env.development?
+    end
+  end
+
   namespace :construction do
     desc 'DB を壊して最初から作り直す'
     task execute: :environment do

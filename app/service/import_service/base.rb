@@ -11,7 +11,8 @@ module ImportService
         @klass.import!(
           @headers,
           @rows,
-          validate: true
+          validate: true,
+          on_duplicate_key_ignore: true
         )
       end
     end

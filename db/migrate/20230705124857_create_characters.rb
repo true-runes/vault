@@ -12,5 +12,8 @@ class CreateCharacters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :characters, :name, unique: true
+    add_index :characters, :name_en, unique: true
   end
 end

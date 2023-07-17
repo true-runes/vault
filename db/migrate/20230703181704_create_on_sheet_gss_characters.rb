@@ -1,8 +1,8 @@
 class CreateOnSheetGssCharacters < ActiveRecord::Migration[7.0]
   def change
     create_table :on_sheet_gss_characters do |t|
-      t.string :sosenkyo_name, null: true, comment: '総選挙での名前'
-      t.string :name, null: false, comment: '名前'
+      t.string :sosenkyo_name, null: true, comment: '総選挙での名前' # NULL が重複
+      t.string :name, null: false, comment: '名前' # ゴードンが重複
 
       t.boolean :has_nickname, null: true, comment: '別名を持つかどうか'
       t.boolean :exists_gs1, null: false, comment: '幻水Iに登場するかどうか'
@@ -21,5 +21,10 @@ class CreateOnSheetGssCharacters < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :on_sheet_gss_characters,
+              %i[sosenkyo_name name],
+              unique: true,
+              name: 'index_on_sheet_gss_characters_on_multiple_attrs'
   end
 end

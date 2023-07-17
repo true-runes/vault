@@ -6,5 +6,7 @@ class CreateNicknames < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :nicknames, :name, unique: true
   end
 end

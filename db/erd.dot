@@ -192,6 +192,9 @@ m_Nickname [label = <<table border="0" align="center" cellspacing="0.5" cellpadd
   <tr><td align="left" width="130" port="nickname_11">nickname_11 <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="nickname_12">nickname_12 <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="nickname_13">nickname_13 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname_14">nickname_14 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname_15">nickname_15 <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="nickname_16">nickname_16 <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
 "m_OnSheet::Platform" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
@@ -214,7 +217,7 @@ m_Nickname [label = <<table border="0" align="center" cellspacing="0.5" cellpadd
   <tr><td align="left" width="130" port="id">id <font face="Arial Italic" color="grey60">integer (8) PK</font></td></tr>
   <tr><td align="left" width="130" port="name">name <font face="Arial Italic" color="grey60">string</font></td></tr>
   <tr><td align="left" width="130" port="name_en">name_en <font face="Arial Italic" color="grey60">string</font></td></tr>
-  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="seating_order">seating_order <font face="Arial Italic" color="grey60">integer</font></td></tr>
   <tr><td align="left" width="130" port="yomi">yomi <font face="Arial Italic" color="grey60">string</font></td></tr>
 </table>
 >];
