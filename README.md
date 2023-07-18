@@ -34,7 +34,7 @@ $ bundle exec rails db:download_csv
 ```bash
 # 必要に応じて DB をまっさらにする
 # $ bundle exec rails db:migrate:reset
-$ bundle exec rails db:import_csvs
+$ bundle exec rails db:import_csv
 ```
 
 #### 4. 「3.」でインポートされた DB を用いて ActiveRecord を用いて正式 DB を構成する
