@@ -163,8 +163,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
     t.string "nickname_11", comment: "ニックネーム11"
     t.string "nickname_12", comment: "ニックネーム12"
     t.string "nickname_13", comment: "ニックネーム13"
+    t.string "nickname_14", comment: "ニックネーム14"
+    t.string "nickname_15", comment: "ニックネーム15"
+    t.string "nickname_16", comment: "ニックネーム16"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_on_sheet_nicknames_on_name", unique: true
+    t.index ["nickname_00"], name: "index_on_sheet_nicknames_on_nickname_00", unique: true
   end
 
   create_table "on_sheet_platforms", force: :cascade do |t|
@@ -178,13 +183,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
   end
 
   create_table "on_sheet_stars", force: :cascade do |t|
-    t.string "seating_order", comment: "108星の順番"
-    t.integer "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
+    t.integer "seating_order", comment: "108星の順番"
+    t.string "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
     t.string "name", comment: "108星の名前"
     t.string "yomi", comment: "108星の名前（読み仮名）"
     t.string "name_en", comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_on_sheet_stars_on_name", unique: true
     t.index ["seating_order"], name: "index_on_sheet_stars_on_seating_order", unique: true
   end
 
@@ -205,12 +211,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
   end
 
   create_table "stars", force: :cascade do |t|
-    t.string "seating_order", null: false, comment: "108星の順番"
+    t.integer "seating_order", null: false, comment: "108星の順番"
+    t.integer "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
     t.string "name", null: false, comment: "108星の名前"
     t.string "yomi", default: "", null: false, comment: "108星の読み仮名"
     t.string "name_en", null: false, comment: "108星の英語名"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_stars_on_name", unique: true
+    t.index ["seating_order"], name: "index_stars_on_seating_order", unique: true
   end
 
   add_foreign_key "gss_character_to_nicknames", "gss_characters"

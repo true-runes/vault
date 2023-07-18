@@ -8,11 +8,12 @@ module ImportService
 
     def execute
       ActiveRecord::Base.transaction do
-        @klass.import!(
-          @headers,
-          @rows,
-          validate: true
-        )
+        objects = @rows.map do |row|
+          # NOTE: imported_headers.zip(row).to_h だと実質意味をなさない（主キーを入れないといけない）
+          @klass.find_or_initialize_by(@headers.zip(row).to_h)
+        end
+
+        @klass.import!(objects, on_duplicate_key_update: :all)
       end
     end
 

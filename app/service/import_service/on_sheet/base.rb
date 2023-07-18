@@ -45,10 +45,14 @@ module ImportService
           imported_headers = headers_without_id_column
           imported_rows = rows_without_id_column
 
+          imported_objects = imported_rows.map do |row|
+            # NOTE: imported_headers.zip(row).to_h だと実質意味をなさない（主キーを入れないといけない）
+            imported_klass.find_or_initialize_by(imported_headers.zip(row).to_h)
+          end
+
           imported_klass.import!(
-            imported_headers,
-            imported_rows,
-            validate: true
+            imported_objects,
+            on_duplicate_key_update: :all
           )
         end
       end

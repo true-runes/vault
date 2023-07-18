@@ -22,6 +22,9 @@ module ImportService
           nickname_record.nickname_11,
           nickname_record.nickname_12,
           nickname_record.nickname_13,
+          nickname_record.nickname_14,
+          nickname_record.nickname_15,
+          nickname_record.nickname_16,
         ].uniq.compact_blank
       end.flatten
 
