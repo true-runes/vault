@@ -7,4 +7,5 @@
 
 bin/rails db:create
 bin/rails db:migrate
-bin/rails db:construction:execute
+# bin/rails db:import_csv
+# bin/rails db:make_up_db
