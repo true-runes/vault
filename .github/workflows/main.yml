@@ -55,8 +55,8 @@ jobs:
           bundle exec rails db:migrate
       - name: インポータを実行する
         run: |
-          bundle exec rails db:construction:execute
-          bundle exec rails db:importer:execute
+          bundle exec rails db:import_csv
+          bundle exec rails db:make_up_db
       - name: RSpec を実行する
         run: |
           bundle exec rspec
