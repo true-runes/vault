@@ -12,6 +12,8 @@ gem 'jbuilder'
 gem 'pg'
 gem 'puma'
 gem 'rails'
+gem 'sentry-rails'
+gem 'sentry-ruby'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
