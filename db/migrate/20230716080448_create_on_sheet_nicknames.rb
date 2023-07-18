@@ -16,8 +16,14 @@ class CreateOnSheetNicknames < ActiveRecord::Migration[7.0]
       t.string :nickname_11, null: true, comment: 'ニックネーム11'
       t.string :nickname_12, null: true, comment: 'ニックネーム12'
       t.string :nickname_13, null: true, comment: 'ニックネーム13'
+      t.string :nickname_14, null: true, comment: 'ニックネーム14'
+      t.string :nickname_15, null: true, comment: 'ニックネーム15'
+      t.string :nickname_16, null: true, comment: 'ニックネーム16'
 
       t.timestamps
     end
+
+    add_index :on_sheet_nicknames, :name, unique: true
+    add_index :on_sheet_nicknames, :nickname_00, unique: true
   end
 end

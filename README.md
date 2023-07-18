@@ -15,7 +15,7 @@
 - `db/csv_on_sheet` 配下に CSVファイル が保存されていく
 
 ```bash
-$ bundle exec rails db:download_csv:execute
+$ bundle exec rails db:download_csv
 ```
 
 #### 3. 「2.」で得られたCSV をデータソースとするインポートタスクを実行する
@@ -23,9 +23,24 @@ $ bundle exec rails db:download_csv:execute
 - インポートされるファイルは明示的に記述する必要がある
   - `config/initializers/constant_value.rb`
 - インポートが正常に完了すると `db` 配下に ER図 が生成される
+- `OnSheet::` 名前空間のテーブルが作られる
+  - `OnSheet::Star`
+  - `OnSheet::Title`
+  - `OnSheet::Platform`
+- 冪等なので何回実行しても同じであるし、更新があれば更新される
+  - CSV が更新されたら以下の手順を踏む必要がある
+    - CSV ダウンロード -> (db:migrate) -> CSV インポート -> DB メイクアップ
 
 ```bash
-$ bundle exec rails db:construction:execute
+# 必要に応じて DB をまっさらにする
+# $ bundle exec rails db:migrate:reset
+$ bundle exec rails db:import_csvs
+```
+
+#### 4. 「3.」でインポートされた DB を用いて ActiveRecord を用いて正式 DB を構成する
+
+```bash
+$ bundle exec rails db:make_up_db
 ```
 
 # Tips
