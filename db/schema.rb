@@ -184,7 +184,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_16_081118) do
 
   create_table "on_sheet_stars", force: :cascade do |t|
     t.integer "seating_order", comment: "108星の順番"
-    t.string "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
+    t.integer "category", null: false, comment: "(enum) 天罡星三十六星 or 地煞星七十二星"
     t.string "name", comment: "108星の名前"
     t.string "yomi", comment: "108星の名前（読み仮名）"
     t.string "name_en", comment: "108星の英語名"
