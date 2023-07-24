@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe Character, type: :model do
   describe '特定キャラ' do
     it '#name に "ゴードン" というキャラは存在しないこと' do
@@ -37,6 +38,19 @@ RSpec.describe Character, type: :model do
     end
   end
 
+  describe '"ゲオルグ"' do
+    it 'レコードは存在しないこと' do
+      expect(Character.find_by(name: 'ゲオルグ')).to be_blank
+    end
+  end
+
+  describe '"ゲオルグ・プライム"' do
+    it '一つのレコードとして記録されていること' do
+      expect(Character.find_by(name: 'ゲオルグ・プライム')).to be_present
+      expect(Character.where(name: 'ゲオルグ・プライム').size).to eq 1
+    end
+  end
+
   describe '"アビズボア,フェザー,ジークフリード"' do
     it 'まとめたレコードが記録されていないこと' do
       expect(Character.where(name: 'アビズボア,フェザー,ジークフリード')).to be_blank
@@ -58,3 +72,4 @@ RSpec.describe Character, type: :model do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
