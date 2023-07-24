@@ -16,7 +16,8 @@ module Api
           else
             shown_data = {
               gss_name: gss_character.name,
-              nicknames: gss_character.nicknames.pluck(:name)
+              nicknames: gss_character.nicknames.pluck(:name),
+              product_titles: gss_character.product_titles.pluck(:name)
             }
 
             render json: shown_data

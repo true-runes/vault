@@ -28,12 +28,16 @@ RSpec.describe 'Api::V1::Gss::Characters', type: :request do
       it { expect(response).to have_http_status(:success) }
     end
 
-    describe '戻り値の key に "gss_name" と "nicknames" を含むこと' do
+    describe '戻り値の key' do
       before do
         get '/api/v1/gss/characters/%E3%83%95%E3%83%AA%E3%83%83%E3%82%AF'
       end
 
-      it { expect(JSON.parse(response.body).keys).to include 'gss_name', 'nicknames' }
+      it '期待どおりの値を含むこと' do
+        expect(JSON.parse(response.body).keys).to eq(
+          %w[gss_name nicknames product_titles]
+        )
+      end
     end
   end
 end
