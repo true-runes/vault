@@ -76,6 +76,13 @@ module ImportService
               ]
             end
 
+            if on_sheet_gss_character.exists_gs5 == true
+              rows << [
+                gss_character.id,
+                ::ProductTitle.find_by(name: '幻想水滸伝V').id,
+              ]
+            end
+
             if on_sheet_gss_character.exists_gaiden1 == true
               rows << [
                 gss_character.id,
