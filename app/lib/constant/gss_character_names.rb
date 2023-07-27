@@ -12,8 +12,17 @@ module Constant
       def gaiden
         (
           ProductTitle.find_by(name: '幻想水滸外伝Vol.1').gss_characters.pluck(:name) +
-          ProductTitle.find_by(name: '幻想水滸外伝Vol.2').gss_characters.pluck(:name)
+          ProductTitle.find_by(name: '幻想水滸外伝Vol.2').gss_characters.pluck(:name) -
+          gaiden_removed_character_names
         ).uniq.sort
+      end
+
+      # NOTE: この実装はあまり良くない
+      def gaiden_removed_character_names
+        %w[
+          軍医
+          料理長
+        ]
       end
 
       def s3
