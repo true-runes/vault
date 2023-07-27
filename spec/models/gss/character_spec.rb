@@ -8,6 +8,10 @@ RSpec.describe Gss::Character, type: :model do
   end
 
   describe 'キャラ' do
+    it 'ペック という名前が含まれるキャラは 1人 だけであること' do
+      expect(Gss::Character.where('name like ?', '%ペック%').count).to eq 1
+    end
+
     it '"ジョーカー" という名前が含まれるキャラは 1人 だけであること' do
       expect(Gss::Character.where('name like ?', '%ジョーカー%').count).to eq 1
     end
@@ -46,6 +50,15 @@ RSpec.describe Gss::Character, type: :model do
       character = Gss::Character.find_by(name: 'コノン')
 
       expect(character.product_titles.map(&:name)).to match_array %w[幻想水滸伝ティアクライス]
+    end
+
+    it 'ペック（暗器使い）が 幻水IV, Rhapsodia に属すること' do
+      character = Gss::Character.find_by(name: 'ペック（暗器使い）')
+
+      expect(character.product_titles.map(&:name)).to match_array %w[
+        幻想水滸伝IV
+        Rhapsodia
+      ]
     end
   end
 end
