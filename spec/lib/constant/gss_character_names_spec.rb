@@ -19,6 +19,18 @@ RSpec.describe Constant::GssCharacterNames, type: :model do
       expect(Constant::GssCharacterNames.gaiden.count).to be > 0
     end
 
+    it '#gaiden に料理長が含まれていないこと' do
+      expect(Constant::GssCharacterNames.gaiden).not_to include('料理長')
+    end
+
+    it '#gaiden に軍医が含まれていないこと' do
+      expect(Constant::GssCharacterNames.gaiden).not_to include('料理長')
+    end
+
+    it '#gaiden にザジ・キュイロス（サナトス・クロフォード）が含まれていること' do
+      expect(Constant::GssCharacterNames.gaiden).to include('ザジ・キュイロス（サナトス・クロフォード）')
+    end
+
     it '#s3 で値が返ってくること' do
       expect(Constant::GssCharacterNames.s3.count).to be > 0
     end
