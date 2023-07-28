@@ -1,7 +1,7 @@
 namespace :json do
   desc 'JSON で作品別にエクスポートする'
   task export: :environment do
-    filename_to_json_method_map = {
+    filename_to_array_method_map = {
       'char_s1.json' => Constant::GssCharacterNames.s1,
       'char_s2.json' => Constant::GssCharacterNames.s2,
       'char_gaiden.json' => Constant::GssCharacterNames.gaiden,
@@ -13,10 +13,10 @@ namespace :json do
       'char_tsumutoki.json' => Constant::GssCharacterNames.tsumutoki
     }
 
-    filename_to_json_method_map.each do |filename, json_method|
+    filename_to_array_method_map.each do |filename, array_method|
       File.write(
         "db/json/#{filename}",
-        JSON.pretty_generate(json_method)
+        JSON.pretty_generate(array_method)
       )
     end
   end
