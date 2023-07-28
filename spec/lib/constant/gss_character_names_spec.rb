@@ -31,6 +31,10 @@ RSpec.describe Constant::GssCharacterNames, type: :model do
       expect(Constant::GssCharacterNames.gaiden).to include('ザジ・キュイロス（サナトス・クロフォード）')
     end
 
+    it '#gaiden にジョーカー（ワン）が含まれていること' do
+      expect(Constant::GssCharacterNames.gaiden).to include('ジョーカー（ワン）')
+    end
+
     it '#s3 で値が返ってくること' do
       expect(Constant::GssCharacterNames.s3.count).to be > 0
     end
