@@ -9,6 +9,7 @@ module ImportService
       nickname_records = ::OnSheet::Nickname.all
 
       nickname_records.each do |nickname_record|
+        # nicknames シートの name 列の値で一致を判定している
         gss_character_name = nickname_record.name
         gss_character_id = ::Gss::Character.find_by(name: gss_character_name).id
 
@@ -35,6 +36,7 @@ module ImportService
         # nickname と gss_character_name が同じでも OK とする
         # nickname は「呼び名」の意なので
         nicknames.each do |nickname|
+          # ::Nickname は name だけをカラムに持つ
           nickname_id = ::Nickname.find_by(name: nickname).id
 
           rows << [
