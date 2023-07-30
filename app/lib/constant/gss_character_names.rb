@@ -19,8 +19,9 @@ module Constant
 
       # NOTE: この実装はあまり良くない
       def gaiden_removed_character_names
-        # NOTE: 館の執事？
         %w[
+          はぐれ竜
+          館の執事
           軍医
           料理長
         ]
