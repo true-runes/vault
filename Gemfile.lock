@@ -82,7 +82,7 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (1.4.4)
-    bootsnap (1.17.0)
+    bootsnap (1.17.1)
       msgpack (~> 1.2)
     builder (3.2.4)
     choice (0.2.0)
@@ -334,7 +334,7 @@ DEPENDENCIES
   sentry-ruby
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.4.13
