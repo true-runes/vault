@@ -82,7 +82,7 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (1.4.4)
-    bootsnap (1.18.1)
+    bootsnap (1.18.2)
       msgpack (~> 1.2)
     builder (3.2.4)
     choice (0.2.0)
