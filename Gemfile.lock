@@ -132,7 +132,7 @@ GEM
       google-apis-core (>= 0.11.0, < 2.a)
       google-apis-discovery_v1 (~> 0.5)
       thor (>= 0.20, < 2.a)
-    google-apis-sheets_v4 (0.29.0)
+    google-apis-sheets_v4 (0.30.0)
       google-apis-core (>= 0.14.0, < 2.a)
     google-cloud-env (2.1.1)
       faraday (>= 1.0, < 3.a)
@@ -195,7 +195,7 @@ GEM
     pg (1.5.6)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
