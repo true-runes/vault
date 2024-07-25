@@ -77,8 +77,8 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
@@ -106,9 +106,10 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    faraday (2.9.0)
+    faraday (2.10.0)
       faraday-net_http (>= 2.0, < 3.2)
-    faraday-net_http (3.1.0)
+      logger
+    faraday-net_http (3.1.1)
       net-http
     gems (1.2.0)
     globalid (1.2.1)
@@ -132,7 +133,7 @@ GEM
       google-apis-core (>= 0.11.0, < 2.a)
       google-apis-discovery_v1 (~> 0.5)
       thor (>= 0.20, < 2.a)
-    google-apis-sheets_v4 (0.32.0)
+    google-apis-sheets_v4 (0.33.0)
       google-apis-core (>= 0.15.0, < 2.a)
     google-cloud-env (2.1.1)
       faraday (>= 1.0, < 3.a)
@@ -154,9 +155,10 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.7.2)
-    jwt (2.8.1)
+    jwt (2.8.2)
       base64
     language_server-protocol (3.17.0.3)
+    logger (1.6.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -195,7 +197,7 @@ GEM
     pg (1.5.6)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.5)
+    public_suffix (5.1.1)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
@@ -253,7 +255,7 @@ GEM
       trailblazer-option (>= 0.1.1, < 0.2.0)
       uber (< 0.2.0)
     retriable (3.1.2)
-    rexml (3.2.9)
+    rexml (3.3.2)
       strscan
     rspec-core (3.12.3)
       rspec-support (~> 3.12.0)
