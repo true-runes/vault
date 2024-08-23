@@ -54,7 +54,7 @@ GEM
       activemodel (= 7.2.0)
       activesupport (= 7.2.0)
       timeout (>= 0.4.0)
-    activerecord-import (1.7.0)
+    activerecord-import (1.8.0)
       activerecord (>= 4.2)
     activestorage (7.2.0)
       actionpack (= 7.2.0)
@@ -165,7 +165,7 @@ GEM
       net-smtp
     marcel (1.0.4)
     mini_mime (1.1.5)
-    minitest (5.24.1)
+    minitest (5.25.1)
     msgpack (1.7.2)
     multi_json (1.15.0)
     mutex_m (0.2.0)
