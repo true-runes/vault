@@ -16,6 +16,7 @@ module Vault
     config.api_only = true
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
+    config.active_support.to_time_preserves_timezone = :zone
 
     config.generators do |generator|
       generator.test_framework(
