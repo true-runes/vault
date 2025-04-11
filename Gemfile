@@ -21,10 +21,6 @@ group :development, :test do
   gem 'rubocop-rails', require: false
 end
 
-group :development do
-  gem 'rails-erd'
-end
-
 group :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', require: false
