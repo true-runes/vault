@@ -8,8 +8,8 @@ module ImportService
       on_sheet_s2_character_strs_filtered = []
       on_sheet_s2_character_strs.each do |s2_character_str|
         if s2_character_str.include?(',')
-          s2_character_str.split(',').each do |s2_character_str|
-            on_sheet_s2_character_strs_filtered << s2_character_str
+          s2_character_str.split(',').each do |split_s2_character_str|
+            on_sheet_s2_character_strs_filtered << split_s2_character_str
           end
         else
           on_sheet_s2_character_strs_filtered << s2_character_str
