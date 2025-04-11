@@ -11,7 +11,7 @@ module GoogleDriveService
       # "application/vnd.google-apps.folder"
       # "application/vnd.google-apps.spreadsheet"
       # "application/vnd.google-apps.document"
-      false if @file.mime_type.start_with?('application')
+      return false if @file.mime_type.start_with?('application')
 
       true
     end
