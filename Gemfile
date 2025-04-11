@@ -5,6 +5,7 @@ ruby '3.3.6'
 
 gem 'activerecord-import'
 gem 'bootsnap', require: false
+gem 'csv'
 gem 'dotenv-rails'
 gem 'google-api-client'
 gem 'google-apis-sheets_v4'
